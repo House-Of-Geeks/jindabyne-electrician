@@ -107,7 +107,7 @@ export default function Header() {
           </div>
 
           <Link href="/service-areas/jindabyne" className="nav-link">
-            Areas
+            Service Areas
           </Link>
           <Link href="/contact" className="nav-link">
             Contact

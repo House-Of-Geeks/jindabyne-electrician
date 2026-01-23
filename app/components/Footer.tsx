@@ -41,7 +41,7 @@ export default function Footer() {
               <li><Link href="/service-areas/jindabyne">Jindabyne</Link></li>
               <li><Link href="/service-areas/thredbo">Thredbo</Link></li>
               <li><Link href="/service-areas/perisher">Perisher</Link></li>
-              <li><Link href="/service-areas/charlotte-pass">Charlotte Pass</Link></li>
+              <li><Link href="/service-areas/crackenback">Crackenback</Link></li>
               <li><Link href="/service-areas/berridale">Berridale</Link></li>
               <li><Link href="/service-areas/cooma">Cooma</Link></li>
             </ul>
