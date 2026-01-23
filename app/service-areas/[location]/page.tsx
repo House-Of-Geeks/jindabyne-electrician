@@ -386,15 +386,60 @@ const locationData: Record<string, {
 }
 
 const services = [
-  { name: 'Solar Installation', slug: 'solar-battery', icon: '☀️' },
-  { name: 'Battery Storage', slug: 'battery-storage', icon: '🔋' },
-  { name: 'Starlink Installation', slug: 'starlink-installation', icon: '📡' },
-  { name: 'Underfloor Heating', slug: 'underfloor-heating', icon: '🔥' },
-  { name: 'EV Charger Installation', slug: 'ev-charger-installation', icon: '🚗' },
-  { name: 'Switchboard Upgrades', slug: 'switchboard-upgrades', icon: '⚙️' },
-  { name: 'Smoke Alarm Installation', slug: 'smoke-alarm-installation', icon: '🔔' },
-  { name: 'Emergency Electrical', slug: 'emergency-electrical', icon: '🚨' },
-  { name: 'General Electrical Services', slug: 'lighting-power', icon: '💡' },
+  {
+    name: 'Solar Installation',
+    slug: 'solar-battery',
+    icon: 'solar',
+    description: 'Complete solar installations with battery storage options'
+  },
+  {
+    name: 'Battery Storage',
+    slug: 'battery-storage',
+    icon: 'battery',
+    description: 'Tesla Powerwall, Sonnen & BYD battery systems for backup power'
+  },
+  {
+    name: 'Starlink Installation',
+    slug: 'starlink-installation',
+    icon: 'signal',
+    description: 'Professional Starlink setup for reliable high-speed internet'
+  },
+  {
+    name: 'Underfloor Heating',
+    slug: 'underfloor-heating',
+    icon: 'heating',
+    description: 'Electric underfloor heating for alpine comfort'
+  },
+  {
+    name: 'EV Charger Installation',
+    slug: 'ev-charger-installation',
+    icon: 'charging',
+    description: 'Tesla and universal EV charger installation'
+  },
+  {
+    name: 'Switchboard Upgrades',
+    slug: 'switchboard-upgrades',
+    icon: 'power',
+    description: 'Modern switchboards with safety switches and circuit breakers'
+  },
+  {
+    name: 'Smoke Alarm Installation',
+    slug: 'smoke-alarm-installation',
+    icon: 'alarm',
+    description: 'NSW compliant smoke detector installations and upgrades'
+  },
+  {
+    name: 'Emergency Electrical',
+    slug: 'emergency-electrical',
+    icon: 'emergency',
+    description: '24/7 emergency electrical service for urgent issues'
+  },
+  {
+    name: 'General Electrical Services',
+    slug: 'lighting-power',
+    icon: 'bulb',
+    description: 'LED lighting, power points, repairs, and maintenance'
+  },
 ]
 
 // Generate static params for all locations
@@ -533,10 +578,27 @@ export default function ServiceAreaPage({ params }: { params: { location: string
                   key={service.slug}
                   href={`/service-areas/${params.location}/${service.slug}`}
                   style={{ textDecoration: 'none', color: 'inherit' }}
+                  className="service-card-link"
                 >
                   <div className="service-card">
                     <div className="service-icon">{service.icon}</div>
                     <h3>{service.name}</h3>
+                    <p style={{
+                      color: 'var(--light-slate)',
+                      fontSize: '0.9rem',
+                      marginTop: 'var(--space-sm)',
+                      marginBottom: 'var(--space-md)'
+                    }}>
+                      {service.description}
+                    </p>
+                    <div style={{
+                      marginTop: 'auto',
+                      color: 'var(--electric-blue)',
+                      fontSize: '0.875rem',
+                      fontWeight: 600
+                    }}>
+                      View Details →
+                    </div>
                   </div>
                 </Link>
               ))}

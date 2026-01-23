@@ -34,6 +34,20 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Commercial Services */}
+          <div className="footer-column">
+            <h4 className="footer-heading">Commercial Services</h4>
+            <ul className="footer-links">
+              <li><Link href="/our-services/commercial/ski-lodge-accommodation">Ski Lodges</Link></li>
+              <li><Link href="/our-services/commercial/retail-hospitality">Retail & Hospitality</Link></li>
+              <li><Link href="/our-services/commercial/commercial-solar">Commercial Solar</Link></li>
+              <li><Link href="/our-services/commercial/commercial-switchboards">Switchboards</Link></li>
+              <li><Link href="/our-services/commercial/data-communications">Data & Comms</Link></li>
+              <li><Link href="/our-services/commercial/test-tag">Test & Tag</Link></li>
+              <li><Link href="/our-services/commercial">View All Services</Link></li>
+            </ul>
+          </div>
+
           {/* Service Areas */}
           <div className="footer-column">
             <h4 className="footer-heading">Service Areas</h4>
@@ -44,6 +58,12 @@ export default function Footer() {
               <li><Link href="/service-areas/crackenback">Crackenback</Link></li>
               <li><Link href="/service-areas/berridale">Berridale</Link></li>
               <li><Link href="/service-areas/cooma">Cooma</Link></li>
+              <li><Link href="/service-areas/charlotte-pass">Charlotte Pass</Link></li>
+              <li><Link href="/service-areas/kalkite">Kalkite</Link></li>
+              <li><Link href="/service-areas/dalgety">Dalgety</Link></li>
+              <li><Link href="/service-areas/adaminaby">Adaminaby</Link></li>
+              <li><Link href="/service-areas/east-jindabyne">East Jindabyne</Link></li>
+              <li><Link href="/service-areas/guthega">Guthega</Link></li>
             </ul>
           </div>
 

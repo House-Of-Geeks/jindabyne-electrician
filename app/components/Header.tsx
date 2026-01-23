@@ -106,9 +106,6 @@ export default function Header() {
             )}
           </div>
 
-          <Link href="/service-areas" className="nav-link">
-            Service Areas
-          </Link>
           <Link href="/blog" className="nav-link">
             Blog
           </Link>
@@ -175,9 +172,6 @@ export default function Header() {
             </div>
           </div>
 
-          <Link href="/service-areas" className="mobile-menu-link" onClick={() => setMobileMenuOpen(false)}>
-            Areas
-          </Link>
           <Link href="/blog" className="mobile-menu-link" onClick={() => setMobileMenuOpen(false)}>
             Blog
           </Link>
