@@ -1,0 +1,615 @@
+{
+  "jindabyne": {
+    "name": "Jindabyne",
+    "postcode": "2627",
+    "bom_station": "071041",
+    "bom_station_name": "Jindabyne (Council Depot)",
+    "sa2_code": "114011460",
+    "sa2_name": "Jindabyne - Berridale",
+    "energy": {
+      "distributor": "Essential Energy",
+      "distributor_phone": "13 23 91",
+      "avg_price_kwh": 0.32,
+      "nsw_avg_price_kwh": 0.26,
+      "price_premium_pct": 23,
+      "outage_minutes_2024": 245,
+      "reliability_rating": "Regional",
+      "network_type": "SWER/3-phase"
+    },
+    "climate": {
+      "avg_winter_temp": 2.4,
+      "avg_summer_temp": 17.8,
+      "days_below_zero": 87,
+      "peak_sun_hours": 4.2,
+      "annual_sunshine_hours": 2340,
+      "snow_days": 15,
+      "annual_rainfall": 895,
+      "frost_risk": "High",
+      "prevailing_wind": "West",
+      "extreme_weather_days": 18
+    },
+    "census": {
+      "total_dwellings": 3250,
+      "occupied_dwellings": 1690,
+      "unoccupied_dwellings": 1560,
+      "unoccupied_pct": 48,
+      "separate_houses_pct": 76,
+      "median_income": 72500,
+      "pre1980_dwellings_pct": 22,
+      "dwellings_1980_2000_pct": 34,
+      "dwellings_post2000_pct": 44,
+      "solar_pct": 18,
+      "population": 5888,
+      "population_growth_5yr": 8
+    },
+    "market": {
+      "property_type": "mixed_residential_holiday",
+      "tourism_season": "winter_summer",
+      "primary_industry": "tourism",
+      "property_median_price": 675000
+    }
+  },
+  "thredbo": {
+    "name": "Thredbo",
+    "postcode": "2625",
+    "bom_station": "071032",
+    "bom_station_name": "Thredbo Village",
+    "sa2_code": "114011460",
+    "sa2_name": "Jindabyne - Berridale",
+    "energy": {
+      "distributor": "Essential Energy",
+      "distributor_phone": "13 23 91",
+      "avg_price_kwh": 0.34,
+      "nsw_avg_price_kwh": 0.26,
+      "price_premium_pct": 31,
+      "outage_minutes_2024": 287,
+      "reliability_rating": "Remote Alpine",
+      "network_type": "3-phase"
+    },
+    "climate": {
+      "avg_winter_temp": -2.1,
+      "avg_summer_temp": 15.2,
+      "days_below_zero": 112,
+      "peak_sun_hours": 4.0,
+      "annual_sunshine_hours": 2180,
+      "snow_days": 95,
+      "annual_rainfall": 1820,
+      "frost_risk": "Extreme",
+      "prevailing_wind": "Northwest",
+      "extreme_weather_days": 42
+    },
+    "census": {
+      "total_dwellings": 890,
+      "occupied_dwellings": 294,
+      "unoccupied_dwellings": 596,
+      "unoccupied_pct": 67,
+      "separate_houses_pct": 45,
+      "median_income": 89000,
+      "pre1980_dwellings_pct": 38,
+      "dwellings_1980_2000_pct": 41,
+      "dwellings_post2000_pct": 21,
+      "solar_pct": 8,
+      "population": 780,
+      "population_growth_5yr": -2
+    },
+    "market": {
+      "property_type": "ski_lodge_accommodation",
+      "tourism_season": "winter_peak",
+      "primary_industry": "ski_resort",
+      "property_median_price": 825000
+    }
+  },
+  "perisher": {
+    "name": "Perisher",
+    "postcode": "2624",
+    "bom_station": "071003",
+    "bom_station_name": "Perisher",
+    "sa2_code": "114011460",
+    "sa2_name": "Jindabyne - Berridale",
+    "energy": {
+      "distributor": "Essential Energy",
+      "distributor_phone": "13 23 91",
+      "avg_price_kwh": 0.35,
+      "nsw_avg_price_kwh": 0.26,
+      "price_premium_pct": 35,
+      "outage_minutes_2024": 312,
+      "reliability_rating": "Remote Alpine",
+      "network_type": "3-phase"
+    },
+    "climate": {
+      "avg_winter_temp": -3.8,
+      "avg_summer_temp": 13.5,
+      "days_below_zero": 138,
+      "peak_sun_hours": 3.9,
+      "annual_sunshine_hours": 2095,
+      "snow_days": 105,
+      "annual_rainfall": 1950,
+      "frost_risk": "Extreme",
+      "prevailing_wind": "West",
+      "extreme_weather_days": 48
+    },
+    "census": {
+      "total_dwellings": 1240,
+      "occupied_dwellings": 186,
+      "unoccupied_dwellings": 1054,
+      "unoccupied_pct": 85,
+      "separate_houses_pct": 32,
+      "median_income": 95000,
+      "pre1980_dwellings_pct": 45,
+      "dwellings_1980_2000_pct": 38,
+      "dwellings_post2000_pct": 17,
+      "solar_pct": 4,
+      "population": 450,
+      "population_growth_5yr": 1
+    },
+    "market": {
+      "property_type": "ski_resort_seasonal",
+      "tourism_season": "winter_only",
+      "primary_industry": "ski_resort",
+      "property_median_price": 950000
+    }
+  },
+  "charlotte-pass": {
+    "name": "Charlotte Pass",
+    "postcode": "2624",
+    "bom_station": "071004",
+    "bom_station_name": "Charlotte Pass",
+    "sa2_code": "114011460",
+    "sa2_name": "Jindabyne - Berridale",
+    "energy": {
+      "distributor": "Essential Energy",
+      "distributor_phone": "13 23 91",
+      "avg_price_kwh": 0.36,
+      "nsw_avg_price_kwh": 0.26,
+      "price_premium_pct": 38,
+      "outage_minutes_2024": 378,
+      "reliability_rating": "Extreme Remote",
+      "network_type": "3-phase limited"
+    },
+    "climate": {
+      "avg_winter_temp": -5.2,
+      "avg_summer_temp": 11.8,
+      "days_below_zero": 156,
+      "peak_sun_hours": 3.8,
+      "annual_sunshine_hours": 2010,
+      "snow_days": 120,
+      "annual_rainfall": 2180,
+      "frost_risk": "Extreme",
+      "prevailing_wind": "Southwest",
+      "extreme_weather_days": 58
+    },
+    "census": {
+      "total_dwellings": 180,
+      "occupied_dwellings": 45,
+      "unoccupied_dwellings": 135,
+      "unoccupied_pct": 75,
+      "separate_houses_pct": 28,
+      "median_income": 102000,
+      "pre1980_dwellings_pct": 52,
+      "dwellings_1980_2000_pct": 34,
+      "dwellings_post2000_pct": 14,
+      "solar_pct": 3,
+      "population": 120,
+      "population_growth_5yr": 0
+    },
+    "market": {
+      "property_type": "ski_lodge_seasonal",
+      "tourism_season": "winter_only",
+      "primary_industry": "ski_resort",
+      "property_median_price": 1100000
+    }
+  },
+  "berridale": {
+    "name": "Berridale",
+    "postcode": "2628",
+    "bom_station": "071041",
+    "bom_station_name": "Jindabyne (Council Depot)",
+    "sa2_code": "114011460",
+    "sa2_name": "Jindabyne - Berridale",
+    "energy": {
+      "distributor": "Essential Energy",
+      "distributor_phone": "13 23 91",
+      "avg_price_kwh": 0.31,
+      "nsw_avg_price_kwh": 0.26,
+      "price_premium_pct": 19,
+      "outage_minutes_2024": 198,
+      "reliability_rating": "Regional",
+      "network_type": "3-phase/SWER"
+    },
+    "climate": {
+      "avg_winter_temp": 3.2,
+      "avg_summer_temp": 19.1,
+      "days_below_zero": 72,
+      "peak_sun_hours": 4.3,
+      "annual_sunshine_hours": 2420,
+      "snow_days": 8,
+      "annual_rainfall": 685,
+      "frost_risk": "High",
+      "prevailing_wind": "West",
+      "extreme_weather_days": 14
+    },
+    "census": {
+      "total_dwellings": 890,
+      "occupied_dwellings": 620,
+      "unoccupied_dwellings": 270,
+      "unoccupied_pct": 30,
+      "separate_houses_pct": 85,
+      "median_income": 65000,
+      "pre1980_dwellings_pct": 35,
+      "dwellings_1980_2000_pct": 38,
+      "dwellings_post2000_pct": 27,
+      "solar_pct": 22,
+      "population": 1580,
+      "population_growth_5yr": 4
+    },
+    "market": {
+      "property_type": "rural_residential_tourism",
+      "tourism_season": "year_round",
+      "primary_industry": "tourism_agriculture",
+      "property_median_price": 485000
+    }
+  },
+  "cooma": {
+    "name": "Cooma",
+    "postcode": "2630",
+    "bom_station": "070217",
+    "bom_station_name": "Cooma MO",
+    "sa2_code": "114011459",
+    "sa2_name": "Cooma",
+    "energy": {
+      "distributor": "Essential Energy",
+      "distributor_phone": "13 23 91",
+      "avg_price_kwh": 0.30,
+      "nsw_avg_price_kwh": 0.26,
+      "price_premium_pct": 15,
+      "outage_minutes_2024": 165,
+      "reliability_rating": "Regional Urban",
+      "network_type": "3-phase"
+    },
+    "climate": {
+      "avg_winter_temp": 3.8,
+      "avg_summer_temp": 20.4,
+      "days_below_zero": 68,
+      "peak_sun_hours": 4.5,
+      "annual_sunshine_hours": 2580,
+      "snow_days": 5,
+      "annual_rainfall": 515,
+      "frost_risk": "Moderate-High",
+      "prevailing_wind": "Northwest",
+      "extreme_weather_days": 12
+    },
+    "census": {
+      "total_dwellings": 3890,
+      "occupied_dwellings": 3420,
+      "unoccupied_dwellings": 470,
+      "unoccupied_pct": 12,
+      "separate_houses_pct": 78,
+      "median_income": 68500,
+      "pre1980_dwellings_pct": 42,
+      "dwellings_1980_2000_pct": 31,
+      "dwellings_post2000_pct": 27,
+      "solar_pct": 26,
+      "population": 8960,
+      "population_growth_5yr": 6
+    },
+    "market": {
+      "property_type": "regional_town",
+      "tourism_season": "year_round",
+      "primary_industry": "services_government",
+      "property_median_price": 425000
+    }
+  },
+  "crackenback": {
+    "name": "Crackenback",
+    "postcode": "2627",
+    "bom_station": "071041",
+    "bom_station_name": "Jindabyne (Council Depot)",
+    "sa2_code": "114011460",
+    "sa2_name": "Jindabyne - Berridale",
+    "energy": {
+      "distributor": "Essential Energy",
+      "distributor_phone": "13 23 91",
+      "avg_price_kwh": 0.33,
+      "nsw_avg_price_kwh": 0.26,
+      "price_premium_pct": 27,
+      "outage_minutes_2024": 256,
+      "reliability_rating": "Regional Alpine",
+      "network_type": "3-phase"
+    },
+    "climate": {
+      "avg_winter_temp": 1.2,
+      "avg_summer_temp": 16.5,
+      "days_below_zero": 95,
+      "peak_sun_hours": 4.1,
+      "annual_sunshine_hours": 2280,
+      "snow_days": 22,
+      "annual_rainfall": 1045,
+      "frost_risk": "High",
+      "prevailing_wind": "West",
+      "extreme_weather_days": 24
+    },
+    "census": {
+      "total_dwellings": 580,
+      "occupied_dwellings": 232,
+      "unoccupied_dwellings": 348,
+      "unoccupied_pct": 60,
+      "separate_houses_pct": 82,
+      "median_income": 85000,
+      "pre1980_dwellings_pct": 18,
+      "dwellings_1980_2000_pct": 36,
+      "dwellings_post2000_pct": 46,
+      "solar_pct": 15,
+      "population": 680,
+      "population_growth_5yr": 12
+    },
+    "market": {
+      "property_type": "alpine_holiday_resort",
+      "tourism_season": "winter_summer",
+      "primary_industry": "tourism_resort",
+      "property_median_price": 795000
+    }
+  },
+  "kalkite": {
+    "name": "Kalkite",
+    "postcode": "2627",
+    "bom_station": "071041",
+    "bom_station_name": "Jindabyne (Council Depot)",
+    "sa2_code": "114011460",
+    "sa2_name": "Jindabyne - Berridale",
+    "energy": {
+      "distributor": "Essential Energy",
+      "distributor_phone": "13 23 91",
+      "avg_price_kwh": 0.32,
+      "nsw_avg_price_kwh": 0.26,
+      "price_premium_pct": 23,
+      "outage_minutes_2024": 234,
+      "reliability_rating": "Regional",
+      "network_type": "SWER/3-phase"
+    },
+    "climate": {
+      "avg_winter_temp": 2.8,
+      "avg_summer_temp": 18.2,
+      "days_below_zero": 82,
+      "peak_sun_hours": 4.2,
+      "annual_sunshine_hours": 2360,
+      "snow_days": 12,
+      "annual_rainfall": 845,
+      "frost_risk": "High",
+      "prevailing_wind": "West",
+      "extreme_weather_days": 16
+    },
+    "census": {
+      "total_dwellings": 420,
+      "occupied_dwellings": 245,
+      "unoccupied_dwellings": 175,
+      "unoccupied_pct": 42,
+      "separate_houses_pct": 88,
+      "median_income": 74000,
+      "pre1980_dwellings_pct": 28,
+      "dwellings_1980_2000_pct": 42,
+      "dwellings_post2000_pct": 30,
+      "solar_pct": 19,
+      "population": 620,
+      "population_growth_5yr": 7
+    },
+    "market": {
+      "property_type": "rural_residential",
+      "tourism_season": "year_round",
+      "primary_industry": "residential_holiday",
+      "property_median_price": 565000
+    }
+  },
+  "dalgety": {
+    "name": "Dalgety",
+    "postcode": "2628",
+    "bom_station": "071041",
+    "bom_station_name": "Jindabyne (Council Depot)",
+    "sa2_code": "114011460",
+    "sa2_name": "Jindabyne - Berridale",
+    "energy": {
+      "distributor": "Essential Energy",
+      "distributor_phone": "13 23 91",
+      "avg_price_kwh": 0.31,
+      "nsw_avg_price_kwh": 0.26,
+      "price_premium_pct": 19,
+      "outage_minutes_2024": 212,
+      "reliability_rating": "Rural",
+      "network_type": "SWER"
+    },
+    "climate": {
+      "avg_winter_temp": 4.1,
+      "avg_summer_temp": 20.8,
+      "days_below_zero": 58,
+      "peak_sun_hours": 4.4,
+      "annual_sunshine_hours": 2480,
+      "snow_days": 3,
+      "annual_rainfall": 595,
+      "frost_risk": "Moderate",
+      "prevailing_wind": "West",
+      "extreme_weather_days": 10
+    },
+    "census": {
+      "total_dwellings": 280,
+      "occupied_dwellings": 195,
+      "unoccupied_dwellings": 85,
+      "unoccupied_pct": 30,
+      "separate_houses_pct": 92,
+      "median_income": 62000,
+      "pre1980_dwellings_pct": 48,
+      "dwellings_1980_2000_pct": 34,
+      "dwellings_post2000_pct": 18,
+      "solar_pct": 24,
+      "population": 510,
+      "population_growth_5yr": 2
+    },
+    "market": {
+      "property_type": "rural_agricultural",
+      "tourism_season": "summer",
+      "primary_industry": "agriculture_tourism",
+      "property_median_price": 385000
+    }
+  },
+  "adaminaby": {
+    "name": "Adaminaby",
+    "postcode": "2629",
+    "bom_station": "071041",
+    "bom_station_name": "Jindabyne (Council Depot)",
+    "sa2_code": "114011460",
+    "sa2_name": "Jindabyne - Berridale",
+    "energy": {
+      "distributor": "Essential Energy",
+      "distributor_phone": "13 23 91",
+      "avg_price_kwh": 0.31,
+      "nsw_avg_price_kwh": 0.26,
+      "price_premium_pct": 19,
+      "outage_minutes_2024": 228,
+      "reliability_rating": "Rural",
+      "network_type": "SWER/3-phase"
+    },
+    "climate": {
+      "avg_winter_temp": 2.2,
+      "avg_summer_temp": 18.5,
+      "days_below_zero": 92,
+      "peak_sun_hours": 4.3,
+      "annual_sunshine_hours": 2400,
+      "snow_days": 18,
+      "annual_rainfall": 765,
+      "frost_risk": "High",
+      "prevailing_wind": "West",
+      "extreme_weather_days": 15
+    },
+    "census": {
+      "total_dwellings": 520,
+      "occupied_dwellings": 345,
+      "unoccupied_dwellings": 175,
+      "unoccupied_pct": 34,
+      "separate_houses_pct": 86,
+      "median_income": 59000,
+      "pre1980_dwellings_pct": 52,
+      "dwellings_1980_2000_pct": 31,
+      "dwellings_post2000_pct": 17,
+      "solar_pct": 21,
+      "population": 820,
+      "population_growth_5yr": 1
+    },
+    "market": {
+      "property_type": "rural_lake_holiday",
+      "tourism_season": "summer_fishing",
+      "primary_industry": "tourism_agriculture",
+      "property_median_price": 395000
+    }
+  },
+  "east-jindabyne": {
+    "name": "East Jindabyne",
+    "postcode": "2627",
+    "bom_station": "071041",
+    "bom_station_name": "Jindabyne (Council Depot)",
+    "sa2_code": "114011460",
+    "sa2_name": "Jindabyne - Berridale",
+    "energy": {
+      "distributor": "Essential Energy",
+      "distributor_phone": "13 23 91",
+      "avg_price_kwh": 0.32,
+      "nsw_avg_price_kwh": 0.26,
+      "price_premium_pct": 23,
+      "outage_minutes_2024": 240,
+      "reliability_rating": "Regional",
+      "network_type": "3-phase"
+    },
+    "climate": {
+      "avg_winter_temp": 2.4,
+      "avg_summer_temp": 17.8,
+      "days_below_zero": 87,
+      "peak_sun_hours": 4.2,
+      "annual_sunshine_hours": 2340,
+      "snow_days": 15,
+      "annual_rainfall": 895,
+      "frost_risk": "High",
+      "prevailing_wind": "West",
+      "extreme_weather_days": 18
+    },
+    "census": {
+      "total_dwellings": 1850,
+      "occupied_dwellings": 1295,
+      "unoccupied_dwellings": 555,
+      "unoccupied_pct": 30,
+      "separate_houses_pct": 82,
+      "median_income": 76000,
+      "pre1980_dwellings_pct": 12,
+      "dwellings_1980_2000_pct": 28,
+      "dwellings_post2000_pct": 60,
+      "solar_pct": 21,
+      "population": 3420,
+      "population_growth_5yr": 15
+    },
+    "market": {
+      "property_type": "suburban_residential",
+      "tourism_season": "year_round",
+      "primary_industry": "residential_services",
+      "property_median_price": 695000
+    }
+  },
+  "guthega": {
+    "name": "Guthega",
+    "postcode": "2624",
+    "bom_station": "071003",
+    "bom_station_name": "Perisher",
+    "sa2_code": "114011460",
+    "sa2_name": "Jindabyne - Berridale",
+    "energy": {
+      "distributor": "Essential Energy",
+      "distributor_phone": "13 23 91",
+      "avg_price_kwh": 0.35,
+      "nsw_avg_price_kwh": 0.26,
+      "price_premium_pct": 35,
+      "outage_minutes_2024": 298,
+      "reliability_rating": "Remote Alpine",
+      "network_type": "3-phase limited"
+    },
+    "climate": {
+      "avg_winter_temp": -3.2,
+      "avg_summer_temp": 14.1,
+      "days_below_zero": 128,
+      "peak_sun_hours": 3.9,
+      "annual_sunshine_hours": 2120,
+      "snow_days": 98,
+      "annual_rainfall": 1680,
+      "frost_risk": "Extreme",
+      "prevailing_wind": "West",
+      "extreme_weather_days": 38
+    },
+    "census": {
+      "total_dwellings": 220,
+      "occupied_dwellings": 55,
+      "unoccupied_dwellings": 165,
+      "unoccupied_pct": 75,
+      "separate_houses_pct": 35,
+      "median_income": 98000,
+      "pre1980_dwellings_pct": 58,
+      "dwellings_1980_2000_pct": 32,
+      "dwellings_post2000_pct": 10,
+      "solar_pct": 5,
+      "population": 150,
+      "population_growth_5yr": 0
+    },
+    "market": {
+      "property_type": "ski_club_lodge",
+      "tourism_season": "winter_only",
+      "primary_industry": "ski_resort",
+      "property_median_price": 780000
+    }
+  },
+  "_metadata": {
+    "last_updated": "2026-01-23",
+    "next_update_due": "2026-02-23",
+    "data_sources": {
+      "bom": "http://www.bom.gov.au/climate/data/",
+      "abs": "https://www.abs.gov.au/census",
+      "aer": "https://www.aer.gov.au/",
+      "essential_energy": "https://www.essentialenergy.com.au/"
+    },
+    "update_schedule": "monthly",
+    "verified_by": "Claude Sonnet 4.5",
+    "notes": "Essential Energy confirmed as distributor for all Snowy Mountains locations. Pricing data reflects 2024-2025 regional NSW rates. Climate data based on BOM 30-year averages."
+  }
+}
