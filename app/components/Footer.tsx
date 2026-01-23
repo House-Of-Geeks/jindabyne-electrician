@@ -99,6 +99,7 @@ export default function Footer() {
               <Link href="/our-services/residential">Residential</Link>
               <Link href="/our-services/commercial">Commercial</Link>
               <Link href="/blog">Blog</Link>
+              <Link href="/privacy">Privacy Policy</Link>
               <Link href="/contact">Contact</Link>
             </div>
           </div>

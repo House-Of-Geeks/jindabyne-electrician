@@ -17,6 +17,13 @@ const residentialServices = [
     tag: 'Essential Services'
   },
   {
+    slug: 'property-management-real-estate',
+    icon: 'property',
+    title: 'Property Management & Real Estate',
+    description: 'Compliance certificates, inspections, and fast turnaround electrical services for property managers, landlords, and real estate agents.',
+    tag: 'Airbnb & Rental Property'
+  },
+  {
     slug: 'switchboard-upgrades',
     icon: 'power',
     title: 'Switchboard Upgrades',

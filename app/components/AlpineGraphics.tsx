@@ -306,6 +306,15 @@ export function ServiceIcon({ icon }: { icon: string }) {
         <circle cx="12" cy="11" r="3" stroke="#FFB800" strokeWidth="2"/>
         <path d="M12 14v3" stroke="#FFB800" strokeWidth="2" strokeLinecap="round"/>
       </svg>
+    ),
+    property: (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 21h18M5 21V10l7-5 7 5v11" stroke="#00D9FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <rect x="9" y="12" width="6" height="9" stroke="#00D9FF" strokeWidth="2"/>
+        <path d="M10 8h1M13 8h1M10 15h1M13 15h1" stroke="#FFB800" strokeWidth="2" strokeLinecap="round"/>
+        <circle cx="18" cy="6" r="3" stroke="#FFB800" strokeWidth="2"/>
+        <path d="M17 6h2" stroke="#FFB800" strokeWidth="1.5" strokeLinecap="round"/>
+      </svg>
     )
   }
 
