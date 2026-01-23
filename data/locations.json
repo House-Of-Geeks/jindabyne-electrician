@@ -70,7 +70,7 @@
       "avg_winter_temp": -2.1,
       "avg_summer_temp": 15.2,
       "days_below_zero": 112,
-      "peak_sun_hours": 4.0,
+      "peak_sun_hours": 4,
       "annual_sunshine_hours": 2180,
       "snow_days": 95,
       "annual_rainfall": 1820,
@@ -259,7 +259,7 @@
     "energy": {
       "distributor": "Essential Energy",
       "distributor_phone": "13 23 91",
-      "avg_price_kwh": 0.30,
+      "avg_price_kwh": 0.3,
       "nsw_avg_price_kwh": 0.26,
       "price_premium_pct": 15,
       "outage_minutes_2024": 165,
@@ -609,7 +609,7 @@
       "essential_energy": "https://www.essentialenergy.com.au/"
     },
     "update_schedule": "monthly",
-    "verified_by": "Claude Sonnet 4.5",
+    "verified_by": "Automated Monthly Update",
     "notes": "Essential Energy confirmed as distributor for all Snowy Mountains locations. Pricing data reflects 2024-2025 regional NSW rates. Climate data based on BOM 30-year averages."
   }
 }
