@@ -3,6 +3,35 @@ import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import CTASection from '../../../components/CTASection'
 import { Metadata } from 'next'
+import locationDataImport from '../../../../data/locations.json'
+
+// Type-safe location data
+const locationDataRaw = locationDataImport as Record<string, any>
+type LocationData = {
+  name: string
+  postcode: string
+  energy: {
+    distributor: string
+    avg_price_kwh: number
+    nsw_avg_price_kwh: number
+    price_premium_pct: number
+    outage_minutes_2024: number
+  }
+  climate: {
+    avg_winter_temp: number
+    days_below_zero: number
+    peak_sun_hours: number
+    snow_days: number
+    extreme_weather_days: number
+  }
+  census: {
+    total_dwellings: number
+    unoccupied_pct: number
+    median_income: number
+    pre1980_dwellings_pct: number
+    solar_pct: number
+  }
+}
 
 // All service data (residential + commercial)
 const serviceData: Record<string, {
