@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import CTASection from '../../components/CTASection'
+import PageMetadata from '../../components/PageMetadata'
 
 export const metadata = {
   title: 'Residential Electrical Services | Jindabyne Electrician | Snowy Mountains',
@@ -178,6 +179,17 @@ export default function ResidentialServicesPage() {
                   <p style={{ color: 'var(--light-slate)' }}>Built to last in harsh alpine conditions</p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="services-section">
+          <div className="section-container">
+            <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+              <PageMetadata
+                lastUpdated="2026-01-23"
+                showSources={false}
+              />
             </div>
           </div>
         </section>

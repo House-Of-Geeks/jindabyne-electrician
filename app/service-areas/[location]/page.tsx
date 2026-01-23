@@ -2,7 +2,9 @@ import Link from 'next/link'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import CTASection from '../../components/CTASection'
+import PageMetadata from '../../components/PageMetadata'
 import { Metadata } from 'next'
+import locationsData from '../../../data/locations.json'
 
 // Location data for all service areas
 const locationData: Record<string, {
@@ -643,6 +645,38 @@ export default function ServiceAreaPage({ params }: { params: { location: string
                   <div className="area-tag">{area}</div>
                 </Link>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="services-section">
+          <div className="section-container">
+            <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+              <PageMetadata
+                lastUpdated={locationsData._metadata.last_updated}
+                dataSources={[
+                  {
+                    name: 'Bureau of Meteorology',
+                    url: locationsData._metadata.data_sources.bom,
+                    description: 'Climate and weather data'
+                  },
+                  {
+                    name: 'Australian Bureau of Statistics',
+                    url: locationsData._metadata.data_sources.abs,
+                    description: 'Census and population data'
+                  },
+                  {
+                    name: 'Australian Energy Regulator',
+                    url: locationsData._metadata.data_sources.aer,
+                    description: 'Electricity pricing data'
+                  },
+                  {
+                    name: 'Essential Energy',
+                    url: locationsData._metadata.data_sources.essential_energy,
+                    description: 'Network reliability data'
+                  }
+                ]}
+              />
             </div>
           </div>
         </section>

@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import CTASection from '../../components/CTASection'
+import PageMetadata from '../../components/PageMetadata'
 
 export const metadata = {
   title: 'Commercial Electrical Services | Ski Lodges, Retail & Hospitality | Jindabyne',
@@ -149,6 +150,17 @@ export default function CommercialServicesPage() {
                   <p style={{ color: 'var(--light-slate)' }}>Deep understanding of ski season demands and alpine conditions</p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="services-section">
+          <div className="section-container">
+            <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+              <PageMetadata
+                lastUpdated="2026-01-23"
+                showSources={false}
+              />
             </div>
           </div>
         </section>
