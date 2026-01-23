@@ -531,7 +531,7 @@ export default function ServiceAreaPage({ params }: { params: { location: string
               {services.map((service) => (
                 <Link
                   key={service.slug}
-                  href={`/our-services/residential/${service.slug}`}
+                  href={`/service-areas/${params.location}/${service.slug}`}
                   style={{ textDecoration: 'none', color: 'inherit' }}
                 >
                   <div className="service-card">
