@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import CTASection from '../../../components/CTASection'
-import { ServiceSchema, BreadcrumbSchema } from '../../../components/Schema'
+import { ServiceSchema, BreadcrumbSchema } from '../../../../components/Schema'
 import { Metadata } from 'next'
 import { generateLocationServiceIntro, generateWhyLocal } from '../../../../lib/contentGenerators'
 import locationDataImport from '../../../../data/locations.json'
@@ -345,7 +345,7 @@ export default function ServiceLocationPage({ params }: { params: { location: st
         serviceDescription={service.description}
         serviceArea={location.name}
       />
-      <BreadcrumbSchema breadcrumbs={breadcrumbs} />
+      <BreadcrumbSchema items={breadcrumbs} />
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>
           <div className="hero-content">
