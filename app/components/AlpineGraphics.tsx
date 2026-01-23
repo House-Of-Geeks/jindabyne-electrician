@@ -1,3 +1,5 @@
+'use client'
+
 /**
  * SVG Graphics Components for Alpine Technical Design
  * Circuit diagrams, mountain silhouettes, and electrical elements
