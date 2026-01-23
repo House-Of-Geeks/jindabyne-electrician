@@ -1,108 +1,131 @@
 import Link from 'next/link'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import { Metadata } from 'next'
+import { blogPosts } from '../../data/blog'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Electrical Tips & Guides | Jindabyne Electrician Blog',
-  description: 'Expert electrical advice for Snowy Mountains property owners. Solar guides, alpine electrical tips, and local insights.',
+  description: 'Expert electrical advice for Snowy Mountains homeowners and businesses. Solar, battery storage, Starlink, underfloor heating, and more.',
 }
 
-// Blog posts - update this array as new posts are added
-const posts = [
-  {
-    slug: 'solar-in-snowy-mountains',
-    title: 'Does Solar Work in the Snowy Mountains?',
-    excerpt: 'Despite the cold, Jindabyne receives excellent sun hours. Learn how solar performs in alpine conditions and whether it's worth it for your property.',
-    category: 'Solar',
-    date: '2026-01-20',
-    readTime: '5 min read'
-  },
-  {
-    slug: 'battery-backup-alpine-homes',
-    title: 'Why Battery Backup is Essential for Alpine Homes',
-    excerpt: 'Power outages during Snowy Mountains winters can lead to frozen pipes and property damage. Discover how battery systems protect your investment.',
-    category: 'Battery Storage',
-    date: '2026-01-15',
-    readTime: '6 min read'
-  },
-  {
-    slug: 'starlink-installation-guide',
-    title: 'Starlink Installation Guide for Jindabyne Properties',
-    excerpt: 'Professional Starlink installation ensures optimal performance in alpine conditions. Tips for positioning, weatherproofing, and setup.',
-    category: 'Starlink',
-    date: '2026-01-10',
-    readTime: '7 min read'
-  }
-]
-
 export default function BlogPage() {
+  // Sort posts by date (newest first)
+  const sortedPosts = [...blogPosts].sort((a, b) =>
+    new Date(b.date).getTime() - new Date(a.date).getTime()
+  )
+
   return (
     <>
       <Header />
       <main>
         <section className="hero" style={{ minHeight: '50vh' }}>
           <div className="hero-content">
-            <span className="hero-badge">Electrical Guides</span>
-            <h1>Snowy Mountains Electrical Tips & Advice</h1>
+            <span className="hero-badge">Expert Advice</span>
+            <h1>Electrical Tips & Guides for the Snowy Mountains</h1>
             <p className="hero-subtitle">
-              Expert guides, local insights, and electrical advice for Jindabyne, Thredbo,
-              and Snowy Mountains property owners.
+              Practical electrical advice, industry news, and alpine-specific guides
+              for homeowners and businesses in Jindabyne and the Snowy Mountains region.
             </p>
           </div>
         </section>
 
         <section className="services-section">
           <div className="section-container">
-            <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-              <div style={{ display: 'grid', gap: 'var(--space-2xl)' }}>
-                {posts.map((post) => (
-                  <Link
-                    key={post.slug}
-                    href={`/blog/${post.slug}`}
-                    style={{ textDecoration: 'none', color: 'inherit' }}
-                  >
-                    <article className="service-card" style={{ cursor: 'pointer' }}>
-                      <div style={{
-                        display: 'inline-block',
-                        padding: '0.25rem 0.75rem',
-                        background: 'rgba(14, 165, 233, 0.1)',
-                        color: 'var(--electric-blue)',
-                        borderRadius: '4px',
-                        fontSize: '0.75rem',
-                        fontWeight: 600,
-                        marginBottom: 'var(--space-md)'
-                      }}>
-                        {post.category}
-                      </div>
-                      <h2 style={{ marginBottom: 'var(--space-sm)' }}>{post.title}</h2>
-                      <p style={{ color: 'var(--text-secondary)', marginBottom: 'var(--space-md)' }}>
-                        {post.excerpt}
-                      </p>
-                      <div style={{
-                        display: 'flex',
-                        gap: 'var(--space-md)',
-                        fontSize: '0.875rem',
-                        color: 'var(--text-secondary)'
-                      }}>
-                        <span>{new Date(post.date).toLocaleDateString('en-AU', {
+            <div className="blog-grid" style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
+              gap: 'var(--space-xl)',
+              maxWidth: '1200px',
+              margin: '0 auto'
+            }}>
+              {sortedPosts.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  style={{ textDecoration: 'none' }}
+                >
+                  <article className="service-card" style={{
+                    height: '100%',
+                    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                    cursor: 'pointer'
+                  }}>
+                    <div style={{
+                      fontSize: '0.875rem',
+                      color: '#00D9FF',
+                      fontWeight: 600,
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.05em',
+                      marginBottom: 'var(--space-sm)'
+                    }}>
+                      {post.category}
+                    </div>
+
+                    <h2 style={{
+                      fontSize: '1.5rem',
+                      marginBottom: 'var(--space-sm)',
+                      lineHeight: '1.3'
+                    }}>
+                      {post.title}
+                    </h2>
+
+                    <p style={{
+                      color: '#475569',
+                      marginBottom: 'var(--space-md)',
+                      lineHeight: '1.6'
+                    }}>
+                      {post.excerpt}
+                    </p>
+
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 'var(--space-md)',
+                      fontSize: '0.875rem',
+                      color: '#64748B',
+                      marginTop: 'auto'
+                    }}>
+                      <time dateTime={post.date}>
+                        {new Date(post.date).toLocaleDateString('en-AU', {
                           year: 'numeric',
                           month: 'long',
                           day: 'numeric'
-                        })}</span>
-                        <span>•</span>
-                        <span>{post.readTime}</span>
-                      </div>
-                      <div style={{
-                        marginTop: 'var(--space-md)',
-                        color: 'var(--electric-blue)',
-                        fontWeight: 600
-                      }}>
-                        Read More →
-                      </div>
-                    </article>
-                  </Link>
-                ))}
-              </div>
+                        })}
+                      </time>
+                      <span>•</span>
+                      <span>{post.readTime} min read</span>
+                    </div>
+
+                    <div style={{
+                      marginTop: 'var(--space-md)',
+                      color: '#00D9FF',
+                      fontWeight: 600,
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '0.5rem'
+                    }}>
+                      Read Article <span>→</span>
+                    </div>
+                  </article>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="services-section" style={{ background: 'rgba(14, 165, 233, 0.03)' }}>
+          <div className="section-container">
+            <div className="section-header">
+              <div className="section-label">Get in Touch</div>
+              <h2>Need Electrical Help?</h2>
+              <p style={{ maxWidth: '700px', margin: '0 auto', fontSize: '1.125rem', color: '#475569' }}>
+                Our team is ready to help with any electrical project in Jindabyne and the Snowy Mountains.
+              </p>
+            </div>
+            <div style={{ textAlign: 'center', marginTop: 'var(--space-xl)' }}>
+              <Link href="/contact" className="cta-primary">
+                Get Free Quote
+              </Link>
             </div>
           </div>
         </section>

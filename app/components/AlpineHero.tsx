@@ -332,7 +332,6 @@ export default function AlpineHero() {
 
         <div className="alpine-content">
           <div className="voltage-badge">
-            <span className="bolt-icon">⚡</span>
             <span>Licensed NSW Electrician</span>
           </div>
 
@@ -348,7 +347,6 @@ export default function AlpineHero() {
 
           <div className="alpine-ctas">
             <Link href="/contact" className="cta-charge">
-              <span>⚡</span>
               <span>Get Free Quote</span>
             </Link>
             <Link href="/our-services" className="cta-secondary">

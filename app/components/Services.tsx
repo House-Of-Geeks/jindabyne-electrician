@@ -5,37 +5,37 @@ import { ServiceIcon } from './AlpineGraphics'
 
 const services = [
   {
-    icon: '☀️',
+    icon: 'solar',
     title: 'Solar Installation',
     description: 'Off-grid and grid-tied solar systems designed for alpine conditions. Perfect for holiday homes and remote properties.',
     tag: '$8-15K+ Value'
   },
   {
-    icon: '🔋',
+    icon: 'battery',
     title: 'Battery Storage',
     description: 'Tesla Powerwall, Sonnen & BYD systems. Protect against storm outages and reduce energy costs in regional NSW.',
     tag: '$10-20K+ Value'
   },
   {
-    icon: '📡',
+    icon: 'signal',
     title: 'Starlink Installation',
     description: 'Professional Starlink setup for rural Snowy Mountains properties. Reliable high-speed internet where NBN can\'t reach.',
     tag: 'High Demand'
   },
   {
-    icon: '🔥',
+    icon: 'heating',
     title: 'Underfloor Heating',
     description: 'Electric underfloor heating installation for alpine homes. Premium comfort for Jindabyne winters.',
     tag: 'Alpine Specialist'
   },
   {
-    icon: '🚗',
+    icon: 'charging',
     title: 'EV Charger Installation',
     description: 'Tesla and universal EV charger installation. Pairs perfectly with solar systems for sustainable transport.',
     tag: 'Growing Category'
   },
   {
-    icon: '🔔',
+    icon: 'alarm',
     title: 'Smoke Alarm Upgrades',
     description: 'NSW compliance smoke detector installation and upgrades. Protect your family and meet regulations.',
     tag: 'Compliance Required'

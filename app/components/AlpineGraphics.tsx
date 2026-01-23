@@ -208,6 +208,90 @@ export function GridPattern() {
 }
 
 export function ServiceIcon({ icon }: { icon: string }) {
+  const icons: Record<string, JSX.Element> = {
+    solar: (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="4" stroke="#00D9FF" strokeWidth="2"/>
+        <path d="M12 2V6M12 18V22M22 12H18M6 12H2M19.07 4.93L16.24 7.76M7.76 16.24L4.93 19.07M19.07 19.07L16.24 16.24M7.76 7.76L4.93 4.93" stroke="#FFB800" strokeWidth="2" strokeLinecap="round"/>
+      </svg>
+    ),
+    battery: (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="3" y="7" width="14" height="10" rx="2" stroke="#00D9FF" strokeWidth="2"/>
+        <path d="M17 10V14" stroke="#00D9FF" strokeWidth="2" strokeLinecap="round"/>
+        <path d="M6 10H10M6 14H14" stroke="#FFB800" strokeWidth="2" strokeLinecap="round"/>
+      </svg>
+    ),
+    signal: (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="2" fill="#00D9FF"/>
+        <path d="M8.5 8.5C10.433 6.567 13.567 6.567 15.5 8.5M5.5 5.5C9.08 1.92 14.92 1.92 18.5 5.5" stroke="#00D9FF" strokeWidth="2" strokeLinecap="round"/>
+        <path d="M12 18L12 22" stroke="#FFB800" strokeWidth="2" strokeLinecap="round"/>
+      </svg>
+    ),
+    heating: (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 18H20M4 12H20M4 6H20" stroke="#00D9FF" strokeWidth="2" strokeLinecap="round"/>
+        <path d="M8 3V21M16 3V21" stroke="#FFB800" strokeWidth="2" strokeLinecap="round"/>
+      </svg>
+    ),
+    charging: (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 17H17V7H7V17Z" stroke="#00D9FF" strokeWidth="2"/>
+        <path d="M13 7L9 13H12L11 17" stroke="#FFB800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
+    alarm: (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="8" stroke="#00D9FF" strokeWidth="2"/>
+        <path d="M12 8V12L15 15" stroke="#FFB800" strokeWidth="2" strokeLinecap="round"/>
+        <path d="M8 3L6 5M16 3L18 5" stroke="#00D9FF" strokeWidth="2" strokeLinecap="round"/>
+      </svg>
+    ),
+    bulb: (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C8.686 2 6 4.686 6 8c0 2.21 1.79 4 4 4v4h4v-4c2.21 0 4-1.79 4-4 0-3.314-2.686-6-6-6z" stroke="#00D9FF" strokeWidth="2"/>
+        <path d="M10 20h4M10 17h4" stroke="#FFB800" strokeWidth="2" strokeLinecap="round"/>
+      </svg>
+    ),
+    power: (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="4" width="16" height="16" rx="2" stroke="#00D9FF" strokeWidth="2"/>
+        <path d="M8 8h8M8 12h8M8 16h4" stroke="#FFB800" strokeWidth="2" strokeLinecap="round"/>
+      </svg>
+    ),
+    emergency: (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="9" stroke="#00D9FF" strokeWidth="2"/>
+        <path d="M12 7v6M12 16h.01" stroke="#FFB800" strokeWidth="2" strokeLinecap="round"/>
+      </svg>
+    ),
+    building: (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 21h18M4 21V9l8-6 8 6v12" stroke="#00D9FF" strokeWidth="2" strokeLinecap="round"/>
+        <path d="M9 21v-6h6v6M9 9h2M9 13h2M13 9h2M13 13h2" stroke="#FFB800" strokeWidth="2" strokeLinecap="round"/>
+      </svg>
+    ),
+    shop: (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 9v11h18V9M3 9l1.5-6h15L21 9M3 9h18" stroke="#00D9FF" strokeWidth="2" strokeLinecap="round"/>
+        <path d="M10 13v4M14 13v4" stroke="#FFB800" strokeWidth="2" strokeLinecap="round"/>
+      </svg>
+    ),
+    network: (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="9" stroke="#00D9FF" strokeWidth="2"/>
+        <path d="M2 12h20M12 2c2.5 3 4 7 4 10s-1.5 7-4 10M12 2C9.5 5 8 9 8 12s1.5 7 4 10" stroke="#FFB800" strokeWidth="1.5"/>
+      </svg>
+    ),
+    check: (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="9" stroke="#00D9FF" strokeWidth="2"/>
+        <path d="M8 12l3 3 5-6" stroke="#FFB800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    )
+  }
+
   return (
     <div style={{
       width: '80px',
@@ -218,7 +302,6 @@ export function ServiceIcon({ icon }: { icon: string }) {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      fontSize: '2.5rem',
       position: 'relative',
       overflow: 'hidden',
       marginBottom: '1.5rem'
@@ -232,7 +315,9 @@ export function ServiceIcon({ icon }: { icon: string }) {
         background: 'conic-gradient(from 0deg, transparent, rgba(0, 217, 255, 0.1), transparent)',
         animation: 'iconSpin 8s linear infinite'
       }} />
-      <span style={{ position: 'relative', zIndex: 1 }}>{icon}</span>
+      <div style={{ position: 'relative', zIndex: 1 }}>
+        {icons[icon] || icons.solar}
+      </div>
       <style jsx>{`
         @keyframes iconSpin {
           from { transform: rotate(0deg); }

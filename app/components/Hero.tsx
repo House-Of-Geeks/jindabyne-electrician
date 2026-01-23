@@ -59,15 +59,24 @@ export default function Hero() {
         </div>
         <div className="hero-trust">
           <div className="trust-item">
-            <div className="trust-icon" aria-hidden="true">✓</div>
+            <svg className="trust-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="12" fill="#10B981"/>
+              <path d="M7 12L10.5 15.5L17 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
             <span>Fully Licensed & Insured</span>
           </div>
           <div className="trust-item">
-            <div className="trust-icon" aria-hidden="true">✓</div>
+            <svg className="trust-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="12" fill="#10B981"/>
+              <path d="M7 12L10.5 15.5L17 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
             <span>24/7 Emergency Service</span>
           </div>
           <div className="trust-item">
-            <div className="trust-icon" aria-hidden="true">✓</div>
+            <svg className="trust-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="12" fill="#10B981"/>
+              <path d="M7 12L10.5 15.5L17 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
             <span>7+ Years Local Experience</span>
           </div>
         </div>

@@ -45,28 +45,28 @@ export default function Header() {
                         <span>💡</span> General Electrical Services
                       </Link>
                       <Link href="/our-services/residential/solar-battery" className="mega-menu-link">
-                        <span>☀️</span> Solar Installation
+                        Solar Installation
                       </Link>
                       <Link href="/our-services/residential/battery-storage" className="mega-menu-link">
-                        <span>🔋</span> Battery Storage
+                        Battery Storage
                       </Link>
                       <Link href="/our-services/residential/starlink-installation" className="mega-menu-link">
-                        <span>📡</span> Starlink Installation
+                        Starlink Installation
                       </Link>
                       <Link href="/our-services/residential/underfloor-heating" className="mega-menu-link">
-                        <span>🔥</span> Underfloor Heating
+                        Underfloor Heating
                       </Link>
                       <Link href="/our-services/residential/ev-charger-installation" className="mega-menu-link">
-                        <span>🚗</span> EV Charger Installation
+                        EV Charger Installation
                       </Link>
                       <Link href="/our-services/residential/switchboard-upgrades" className="mega-menu-link">
-                        <span>⚙️</span> Switchboard Upgrades
+                        Switchboard Upgrades
                       </Link>
                       <Link href="/our-services/residential/smoke-alarm-installation" className="mega-menu-link">
-                        <span>🔔</span> Smoke Alarm Installation
+                        Smoke Alarm Installation
                       </Link>
                       <Link href="/our-services/residential/emergency-electrical" className="mega-menu-link">
-                        <span>🚨</span> Emergency Electrical
+                        Emergency Electrical
                       </Link>
                     </div>
                   </div>
@@ -74,30 +74,30 @@ export default function Header() {
                   {/* Commercial Column */}
                   <div className="mega-menu-column">
                     <Link href="/our-services/commercial" className="mega-menu-heading">
-                      <span className="mega-menu-icon-small">🏢</span>
+                      
                       <h3>Commercial Services</h3>
                     </Link>
                     <div className="mega-menu-links">
                       <Link href="/our-services/commercial/ski-lodge-accommodation" className="mega-menu-link">
-                        <span>🏔️</span> Ski Lodge & Accommodation
+                        Ski Lodge & Accommodation
                       </Link>
                       <Link href="/our-services/commercial/retail-hospitality" className="mega-menu-link">
-                        <span>🏪</span> Retail & Hospitality
+                        Retail & Hospitality
                       </Link>
                       <Link href="/our-services/commercial/commercial-solar" className="mega-menu-link">
-                        <span>☀️</span> Commercial Solar
+                        Commercial Solar
                       </Link>
                       <Link href="/our-services/commercial/commercial-switchboards" className="mega-menu-link">
-                        <span>⚙️</span> Commercial Switchboards
+                        Commercial Switchboards
                       </Link>
                       <Link href="/our-services/commercial/data-communications" className="mega-menu-link">
-                        <span>🔌</span> Data & Communications
+                        Data & Communications
                       </Link>
                       <Link href="/our-services/commercial/emergency-exit-lighting" className="mega-menu-link">
-                        <span>🚨</span> Emergency & Exit Lighting
+                        Emergency & Exit Lighting
                       </Link>
                       <Link href="/our-services/commercial/test-tag" className="mega-menu-link">
-                        <span>✅</span> Test & Tag
+                        Test & Tag
                       </Link>
                     </div>
                   </div>
@@ -106,8 +106,11 @@ export default function Header() {
             )}
           </div>
 
-          <Link href="/service-areas/jindabyne" className="nav-link">
+          <Link href="/service-areas" className="nav-link">
             Service Areas
+          </Link>
+          <Link href="/blog" className="nav-link">
+            Blog
           </Link>
           <Link href="/contact" className="nav-link">
             Contact
@@ -172,8 +175,11 @@ export default function Header() {
             </div>
           </div>
 
-          <Link href="/service-areas/jindabyne" className="mobile-menu-link" onClick={() => setMobileMenuOpen(false)}>
+          <Link href="/service-areas" className="mobile-menu-link" onClick={() => setMobileMenuOpen(false)}>
             Areas
+          </Link>
+          <Link href="/blog" className="mobile-menu-link" onClick={() => setMobileMenuOpen(false)}>
+            Blog
           </Link>
           <Link href="/contact" className="mobile-menu-link" onClick={() => setMobileMenuOpen(false)}>
             Contact

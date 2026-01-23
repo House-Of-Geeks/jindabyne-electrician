@@ -3,6 +3,7 @@ import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import CTASection from '../../../components/CTASection'
 import { ServiceSchema, BreadcrumbSchema } from '../../../../components/Schema'
+import { ServiceIcon } from '../../../components/AlpineGraphics'
 import { Metadata } from 'next'
 import { generateLocationServiceIntro, generateWhyLocal } from '../../../../lib/contentGenerators'
 import locationDataImport from '../../../../data/locations.json'
@@ -25,7 +26,7 @@ const serviceData: Record<string, {
     shortName: 'Solar',
     category: 'residential',
     description: 'Complete solar panel installations for alpine homes. Grid-tied and off-grid systems with high-efficiency panels.',
-    icon: '☀️',
+    icon: 'solar',
     benefits: [
       { title: 'Reduce Energy Bills', description: 'Solar systems can reduce electricity bills by 50-80%. Ideal for alpine properties with high heating costs.' },
       { title: 'Storm Power Backup', description: 'Combined with battery storage, solar provides backup during common Snowy Mountains storm outages.' },
@@ -38,7 +39,7 @@ const serviceData: Record<string, {
     shortName: 'Battery Storage',
     category: 'residential',
     description: 'Tesla Powerwall, Sonnen, and BYD battery systems. Backup power and energy independence for alpine properties.',
-    icon: '🔋',
+    icon: 'battery',
     benefits: [
       { title: 'Power Outage Protection', description: 'Battery backup keeps heating, lights, and essential appliances running during storm-related outages.' },
       { title: 'Energy Independence', description: 'Store solar energy for use at night or during peak pricing periods.' },
@@ -51,7 +52,7 @@ const serviceData: Record<string, {
     shortName: 'Starlink',
     category: 'residential',
     description: 'Professional Starlink satellite internet installation. High-speed internet where NBN coverage is poor.',
-    icon: '📡',
+    icon: 'signal',
     benefits: [
       { title: 'High-Speed Internet', description: 'Starlink provides 50-200Mbps download speeds—ideal for remote alpine properties.' },
       { title: 'No NBN Required', description: 'Perfect for areas with poor NBN coverage or unreliable fixed wireless.' },
@@ -64,7 +65,7 @@ const serviceData: Record<string, {
     shortName: 'Underfloor Heating',
     category: 'residential',
     description: 'Electric underfloor heating for alpine homes. Premium comfort for cold Snowy Mountains winters.',
-    icon: '🔥',
+    icon: 'heating',
     benefits: [
       { title: 'Alpine Comfort', description: 'Warm floors are essential for Snowy Mountains properties. Step onto heated tiles instead of cold floors.' },
       { title: 'Energy Efficient', description: 'Modern electric underfloor heating is efficient and can be zoned for different areas.' },
@@ -77,7 +78,7 @@ const serviceData: Record<string, {
     shortName: 'EV Chargers',
     category: 'residential',
     description: 'Tesla Wall Connector and universal EV chargers. Home charging solutions for electric vehicles.',
-    icon: '🚗',
+    icon: 'charging',
     benefits: [
       { title: 'Home Charging Convenience', description: 'Charge overnight at home—no need to find public chargers on alpine roads.' },
       { title: 'Solar Integration', description: 'Charge your EV with free solar energy during the day.' },
@@ -90,7 +91,7 @@ const serviceData: Record<string, {
     shortName: 'Switchboard Upgrades',
     category: 'residential',
     description: 'Modern switchboard upgrades with safety switches and circuit breakers. Essential for older alpine properties.',
-    icon: '⚙️',
+    icon: 'power',
     benefits: [
       { title: 'Safety Critical', description: 'Old fuse boards lack modern safety features. RCD protection prevents electrocution.' },
       { title: 'Handle Modern Loads', description: 'Older switchboards can\'t handle electric heating, solar, and EV chargers.' },
@@ -103,7 +104,7 @@ const serviceData: Record<string, {
     shortName: 'Smoke Alarms',
     category: 'residential',
     description: 'NSW compliant photoelectric smoke alarms. Interconnected systems for residential and rental properties.',
-    icon: '🔔',
+    icon: 'alarm',
     benefits: [
       { title: 'NSW Legal Requirement', description: 'All NSW properties must have working photoelectric smoke alarms.' },
       { title: 'Rental Property Compliance', description: 'Holiday homes and short-term rentals must meet strict smoke alarm standards.' },
@@ -116,7 +117,7 @@ const serviceData: Record<string, {
     shortName: 'Emergency Electrical',
     category: 'residential',
     description: 'Emergency electrician available 24/7. Fast response for power outages, electrical faults, and safety hazards.',
-    icon: '🚨',
+    icon: 'emergency',
     benefits: [
       { title: '24/7 Availability', description: 'Electrical emergencies don\'t wait. Available nights, weekends, and public holidays.' },
       { title: 'Fast Response', description: 'Quick response times throughout the Snowy Mountains region.' },
@@ -129,7 +130,7 @@ const serviceData: Record<string, {
     shortName: 'General Electrical',
     category: 'residential',
     description: 'LED lighting, power points, electrical repairs, and general electrical work for alpine homes.',
-    icon: '💡',
+    icon: 'bulb',
     benefits: [
       { title: 'LED Lighting', description: 'Energy-efficient LED downlights and feature lighting for alpine homes.' },
       { title: 'Power Points', description: 'Additional outlets, USB charging points, and outdoor power points.' },
@@ -143,7 +144,7 @@ const serviceData: Record<string, {
     shortName: 'Ski Lodge Electrical',
     category: 'commercial',
     description: 'Commercial electrical services for ski lodges, hotels, and accommodation providers. Complete installations and maintenance.',
-    icon: '🏔️',
+    icon: 'building',
     benefits: [
       { title: 'Guest Room Fit-Outs', description: 'Power points, lighting, and smart controls for modern guest room standards.' },
       { title: 'Commercial Kitchen Power', description: 'Three-phase power for ovens, fridges, and commercial cooking equipment.' },
@@ -156,7 +157,7 @@ const serviceData: Record<string, {
     shortName: 'Retail & Hospitality',
     category: 'commercial',
     description: 'Commercial electrical for retail shops, cafes, restaurants. Complete fit-outs and maintenance for hospitality businesses.',
-    icon: '🏪',
+    icon: 'shop',
     benefits: [
       { title: 'Shop Fit-Outs', description: 'Complete electrical installations for retail spaces, including lighting and POS systems.' },
       { title: 'Cafe & Restaurant', description: 'Commercial kitchen power, espresso machines, and dining area electrical.' },
@@ -169,7 +170,7 @@ const serviceData: Record<string, {
     shortName: 'Commercial Solar',
     category: 'commercial',
     description: 'Large-scale solar installations for businesses. 20kW to 100kW+ systems to reduce operating costs.',
-    icon: '☀️',
+    icon: 'solar',
     benefits: [
       { title: 'Reduce Operating Costs', description: 'Commercial solar can reduce electricity bills by 50-80% with 3-7 year ROI.' },
       { title: 'Commercial Incentives', description: 'STCs and instant asset write-off schemes reduce upfront costs for businesses.' },
@@ -182,7 +183,7 @@ const serviceData: Record<string, {
     shortName: 'Commercial Switchboards',
     category: 'commercial',
     description: 'Three-phase power and commercial switchboard upgrades. Increased capacity for modern business equipment.',
-    icon: '⚙️',
+    icon: 'power',
     benefits: [
       { title: 'Three-Phase Power', description: 'Essential for commercial kitchens, HVAC systems, and heavy machinery.' },
       { title: 'Increased Capacity', description: 'Upgrade switchboards to handle modern business electrical loads.' },
@@ -195,7 +196,7 @@ const serviceData: Record<string, {
     shortName: 'Data & Communications',
     category: 'commercial',
     description: 'Commercial network cabling, WiFi infrastructure, and structured cabling for business premises.',
-    icon: '🌐',
+    icon: 'network',
     benefits: [
       { title: 'Cat6 Network Cabling', description: 'Structured Cat6 cabling for reliable gigabit networking throughout premises.' },
       { title: 'WiFi Infrastructure', description: 'Commercial WiFi with multiple access points for complete coverage.' },
@@ -208,7 +209,7 @@ const serviceData: Record<string, {
     shortName: 'Emergency Lighting',
     category: 'commercial',
     description: 'NSW compliant emergency and exit lighting for commercial buildings. Required for safe evacuation.',
-    icon: '🚨',
+    icon: 'emergency',
     benefits: [
       { title: 'NSW Building Code', description: 'All commercial buildings require compliant emergency lighting systems.' },
       { title: 'Exit Sign Installation', description: 'Illuminated exit signs with battery backup for power failures.' },
@@ -221,7 +222,7 @@ const serviceData: Record<string, {
     shortName: 'Test & Tag',
     category: 'commercial',
     description: 'Electrical appliance safety testing for workplace compliance. Required for commercial premises.',
-    icon: '✅',
+    icon: 'check',
     benefits: [
       { title: 'WH&S Compliance', description: 'NSW Work Health & Safety legislation requires regular testing of portable appliances.' },
       { title: 'Insurance Requirements', description: 'Many business insurance policies require current test and tag compliance.' },
@@ -391,7 +392,7 @@ export default function ServiceLocationPage({ params }: { params: { location: st
               <div className="services-grid">
                 {service.benefits.map((benefit, idx) => (
                   <div key={idx} className="service-card">
-                    <div className="service-icon">{service.icon}</div>
+                    <ServiceIcon icon={service.icon} />
                     <h3>{benefit.title}</h3>
                     <p>{benefit.description}</p>
                   </div>
@@ -441,7 +442,7 @@ export default function ServiceLocationPage({ params }: { params: { location: st
                       style={{ textDecoration: 'none' }}
                     >
                       <div className="area-tag">
-                        {svc.icon} {svc.shortName}
+                        {svc.shortName}
                       </div>
                     </Link>
                   )
