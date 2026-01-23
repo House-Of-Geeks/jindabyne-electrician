@@ -1,0 +1,164 @@
+name: Monthly Location Data Update
+
+on:
+  schedule:
+    # Runs on the 23rd of every month at 9:00 AM UTC (8:00 PM AEDT)
+    - cron: '0 9 23 * *'
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  update-location-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: |
+          npm install node-fetch@2
+
+      - name: Run data update script
+        id: update
+        run: |
+          node scripts/update-location-data.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --exit-code data/locations.json || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Create Pull Request
+        if: steps.git-check.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: |
+            Monthly location data update - ${{ env.UPDATE_DATE }}
+
+            Automated data update for Snowy Mountains locations.
+            Please review changes before merging.
+          branch: monthly-data-update-${{ github.run_number }}
+          title: '📊 Monthly Location Data Update - ${{ env.UPDATE_DATE }}'
+          body: |
+            ## Monthly Location Data Update
+
+            **Update Date:** ${{ env.UPDATE_DATE }}
+            **Next Update Due:** ${{ env.NEXT_UPDATE }}
+
+            ### ✅ Automated Checks Completed
+            - [x] JSON structure validation
+            - [x] Metadata updated
+            - [x] All 12 locations present
+
+            ### 📋 Manual Review Required
+
+            Please verify and update the following data sources:
+
+            #### Quarterly Updates (Every 3 Months)
+            - [ ] **AER Electricity Pricing** - https://www.aer.gov.au/industry/registers/resources/charts
+              - Update `energy.avg_price_kwh` for all locations
+              - Update `energy.nsw_avg_price_kwh`
+              - Recalculate `energy.price_premium_pct`
+
+            #### Annual Updates (Once Per Year)
+            - [ ] **BOM Climate Data** - http://www.bom.gov.au/climate/data/
+              - Update `climate.peak_sun_hours`
+              - Update `climate.days_below_zero`
+              - Update `climate.snow_days`
+              - Update `climate.extreme_weather_days`
+
+            - [ ] **Essential Energy Reliability** - https://www.essentialenergy.com.au/
+              - Update `energy.outage_minutes_2024`
+              - Check network reliability rating
+
+            - [ ] **Clean Energy Regulator Solar Data** - http://www.cleanenergyregulator.gov.au/
+              - Update `census.solar_pct` by postcode
+
+            #### Census Updates (Every 5 Years - Next: 2026)
+            - [ ] **ABS Census Data** - https://www.abs.gov.au/census
+              - Update all `census.*` fields when new data available
+              - Update population and dwelling counts
+              - Update median income
+
+            ### 🔗 Data Sources
+            - Bureau of Meteorology: http://www.bom.gov.au/climate/data/
+            - Australian Energy Regulator: https://www.aer.gov.au/
+            - Australian Bureau of Statistics: https://www.abs.gov.au/census
+            - Essential Energy: https://www.essentialenergy.com.au/
+
+            ### 📍 Locations Updated
+            - Jindabyne (2627)
+            - Thredbo (2625)
+            - Perisher (2624)
+            - Charlotte Pass (2624)
+            - Crackenback (2627)
+            - Berridale (2628)
+            - Cooma (2630)
+            - Kalkite (2627)
+            - Dalgety (2628)
+            - Adaminaby (2629)
+            - East Jindabyne (2627)
+            - Guthega (2624)
+
+            ### ⚠️ Review Notes
+            - Check for extreme changes (>20% variation)
+            - Verify calculations for price_premium_pct
+            - Ensure seasonal data makes sense
+            - Cross-reference between sources
+
+            ---
+
+            **Automated by:** Monthly Location Data Update workflow
+            **Workflow Run:** ${{ github.run_number }}
+          labels: |
+            data-update
+            automated
+            monthly-maintenance
+          assignees: ${{ github.repository_owner }}
+
+      - name: Create reminder issue if no changes
+        if: steps.git-check.outputs.changed != 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const date = new Date().toISOString().split('T')[0];
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `📅 Monthly Data Update Reminder - ${date}`,
+              body: `## Monthly Location Data Update Reminder
+
+              It's time for the monthly location data review!
+
+              ### Quick Links
+              - [Edit locations.json](https://github.com/${context.repo.owner}/${context.repo.repo}/edit/main/data/locations.json)
+              - [Update Instructions](https://github.com/${context.repo.owner}/${context.repo.repo}/blob/main/scripts/update-location-data.md)
+
+              ### This Month's Focus
+
+              Check if these need updating:
+
+              1. **Electricity Prices** (Quarterly - AER)
+              2. **Outage Data** (Annual - Essential Energy)
+              3. **Climate Data** (Annual - BOM)
+              4. **Solar Penetration** (Annual - CER)
+
+              ### Quick Check
+              - Current data last updated: Check \`data/locations.json\` → \`_metadata.last_updated\`
+              - No automated changes detected this month
+
+              Close this issue once you've reviewed and updated the data if needed.`,
+              labels: ['data-update', 'reminder', 'monthly-maintenance']
+            });
