@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import { ServiceIcon } from './AlpineGraphics'
 
 const services = [
   {
@@ -77,7 +78,7 @@ export default function Services() {
         <div className="services-grid">
           {services.map((service, index) => (
             <div key={index} className="service-card">
-              <div className="service-icon">{service.icon}</div>
+              <ServiceIcon icon={service.icon} />
               <h3>{service.title}</h3>
               <p>{service.description}</p>
               <span className="service-tag">{service.tag}</span>
