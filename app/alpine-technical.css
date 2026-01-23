@@ -1,0 +1,415 @@
+/**
+ * ALPINE TECHNICAL DESIGN SYSTEM
+ * Bold design enhancements for Jindabyne Electrician
+ * Import fonts: Archivo Black (display), Space Mono (technical), Work Sans (body)
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;500;600;700;900&display=swap');
+
+/* Enhanced Alpine Color System */
+:root {
+  --alpine-electric: #00D9FF;
+  --alpine-charge: #00F0FF;
+  --alpine-volt: #FFB800;
+  --alpine-spark: #FF6B00;
+  --alpine-depth: #0F172A;
+  --alpine-carbon: #1E293B;
+  --alpine-frost: #F5FBFF;
+}
+
+/* Alpine Hero Enhancement */
+.alpine-hero-wrapper {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.electrical-grid-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(var(--alpine-electric) 1px, transparent 1px),
+    linear-gradient(90deg, var(--alpine-electric) 1px, transparent 1px);
+  background-size: 120px 120px;
+  opacity: 0.02;
+  animation: gridFlow 20s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes gridFlow {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(120px, 120px); }
+}
+
+/* Diagonal Power Lines */
+.power-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.power-line {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.5), transparent);
+  animation: powerSurge 4s ease-in-out infinite;
+}
+
+.power-line:nth-child(1) {
+  top: 25%;
+  left: -100%;
+  width: 60%;
+  animation-delay: 0s;
+}
+
+.power-line:nth-child(2) {
+  top: 55%;
+  right: -100%;
+  width: 70%;
+  animation-delay: 1.5s;
+  animation-direction: reverse;
+}
+
+.power-line:nth-child(3) {
+  top: 80%;
+  left: -100%;
+  width: 55%;
+  animation-delay: 3s;
+}
+
+@keyframes powerSurge {
+  0% { transform: translateX(0); opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translateX(200vw); opacity: 0; }
+}
+
+/* Mountain Silhouette Layer */
+.alpine-mountains {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40vh;
+  background: linear-gradient(180deg, transparent 0%, rgba(229, 241, 255, 0.4) 100%);
+  clip-path: polygon(
+    0 100%, 0 65%,
+    5% 58%, 10% 63%, 15% 55%, 20% 60%,
+    25% 48%, 32% 55%, 38% 42%, 45% 50%,
+    52% 38%, 58% 47%, 65% 35%, 72% 48%,
+    78% 40%, 84% 53%, 90% 45%, 95% 55%,
+    100% 50%, 100% 100%
+  );
+  opacity: 0.5;
+  z-index: 0;
+}
+
+/* Voltage Badge Enhancement */
+.voltage-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--alpine-electric);
+  background: rgba(0, 217, 255, 0.06);
+  padding: 0.625rem 1.5rem;
+  border: 1.5px solid rgba(0, 217, 255, 0.25);
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+.voltage-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.2), transparent);
+  animation: voltageShimmer 3s ease-in-out infinite;
+}
+
+@keyframes voltageShimmer {
+  0% { left: -100%; }
+  60%, 100% { left: 200%; }
+}
+
+.bolt-pulse {
+  display: inline-block;
+  animation: boltCharge 1.5s ease-in-out infinite;
+}
+
+@keyframes boltCharge {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 rgba(0, 217, 255, 0));
+  }
+  50% {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 8px rgba(0, 217, 255, 0.8));
+  }
+}
+
+/* Title Enhancement with Technical Accent */
+.alpine-title-tech {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: clamp(3rem, 10vw, 6.5rem);
+  line-height: 0.95;
+  color: var(--alpine-depth);
+  margin-bottom: 1.75rem;
+  letter-spacing: -0.035em;
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
+}
+
+.tech-accent {
+  position: relative;
+  display: inline-block;
+  color: var(--alpine-depth);
+}
+
+.tech-accent::after {
+  content: '';
+  position: absolute;
+  bottom: 0.12em;
+  left: -0.05em;
+  right: -0.05em;
+  height: 0.18em;
+  background: linear-gradient(90deg, var(--alpine-electric), var(--alpine-volt));
+  z-index: -1;
+  transform: skewX(-8deg);
+  opacity: 0.85;
+}
+
+/* CTA Button Enhancements */
+.cta-alpine-charge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 1.375rem 3.25rem;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-decoration: none;
+  background: var(--alpine-electric);
+  color: var(--alpine-depth);
+  border: none;
+  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(0, 217, 255, 0.25);
+}
+
+.cta-alpine-charge::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: var(--alpine-volt);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.7s cubic-bezier(0.16, 1, 0.3, 1), height 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cta-alpine-charge:hover::before {
+  width: 600px;
+  height: 600px;
+}
+
+.cta-alpine-charge:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 217, 255, 0.4);
+}
+
+.cta-alpine-charge span {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-alpine-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 1.375rem 3.25rem;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-decoration: none;
+  background: transparent;
+  color: var(--alpine-depth);
+  border: 2.5px solid var(--alpine-depth);
+  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+  transition: all 0.35s ease;
+}
+
+.cta-alpine-outline:hover {
+  background: var(--alpine-depth);
+  color: white;
+  transform: translateX(10px);
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.2);
+}
+
+.cta-arrow {
+  transition: transform 0.35s ease;
+}
+
+.cta-alpine-outline:hover .cta-arrow {
+  transform: translateX(6px);
+}
+
+/* Service Card Alpine Enhancement */
+.service-card-alpine {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1.5px solid rgba(0, 217, 255, 0.12);
+  border-radius: 4px;
+  padding: 2.75rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.service-card-alpine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--alpine-electric), var(--alpine-volt));
+  transition: left 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-card-alpine:hover::before {
+  left: 0;
+}
+
+.service-card-alpine:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 217, 255, 0.18);
+  border-color: rgba(0, 217, 255, 0.35);
+}
+
+/* Technical Data Display */
+.tech-data-block {
+  background: rgba(0, 217, 255, 0.04);
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  border-left: 4px solid var(--alpine-electric);
+  padding: 1.75rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--alpine-carbon);
+  position: relative;
+}
+
+.tech-data-block::before {
+  content: '//';
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: var(--alpine-electric);
+  opacity: 0.3;
+  font-weight: 700;
+}
+
+/* Area Tag Alpine Style */
+.area-tag-alpine {
+  display: inline-block;
+  padding: 0.875rem 1.75rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1.5px solid rgba(0, 217, 255, 0.2);
+  color: var(--alpine-carbon);
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  clip-path: polygon(3% 0%, 100% 0%, 97% 100%, 0% 100%);
+}
+
+.area-tag-alpine:hover {
+  background: var(--alpine-electric);
+  color: var(--alpine-depth);
+  border-color: var(--alpine-electric);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 18px rgba(0, 217, 255, 0.25);
+}
+
+/* Scroll Reveal Animations */
+.alpine-fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.alpine-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger animation delays */
+.stagger-1 { animation-delay: 0.1s; transition-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; transition-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; transition-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; transition-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; transition-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; transition-delay: 0.6s; }
+
+/* Technical Divider */
+.alpine-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--alpine-electric), transparent);
+  margin: 3rem 0;
+  position: relative;
+}
+
+.alpine-divider::before {
+  content: '⚡';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 0 1rem;
+  font-size: 1.25rem;
+  color: var(--alpine-electric);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .alpine-title-tech {
+    font-size: clamp(2.25rem, 12vw, 4rem);
+  }
+
+  .cta-alpine-charge,
+  .cta-alpine-outline {
+    width: 100%;
+    justify-content: center;
+    padding: 1.25rem 2rem;
+  }
+
+  .alpine-mountains {
+    height: 30vh;
+  }
+
+  .service-card-alpine {
+    padding: 2rem;
+  }
+}
