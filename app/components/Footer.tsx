@@ -14,29 +14,10 @@ export default function Footer() {
               <div className="logo-icon">⚡</div>
               <span>JINDABYNE ELECTRICIAN</span>
             </div>
-            <p style={{ color: 'var(--text-secondary)', marginTop: 'var(--space-md)', lineHeight: '1.6', marginBottom: 'var(--space-lg)' }}>
+            <p style={{ color: 'var(--text-secondary)', marginTop: 'var(--space-md)', lineHeight: '1.6' }}>
               Licensed electrical contractors serving the Snowy Mountains region.
               Specialists in solar, battery storage, and alpine electrical systems.
             </p>
-
-            <h4 className="footer-heading">Contact Us</h4>
-            <ul className="footer-contact">
-              <li>
-                <strong>Email:</strong><br />
-                <a href="mailto:info@jindabyneelectrician.com.au" style={{ color: 'var(--electric-blue)', textDecoration: 'none' }}>
-                  info@jindabyneelectrician.com.au
-                </a>
-              </li>
-              <li>
-                <strong>Hours:</strong><br />
-                Mon-Fri: 7:00 AM - 5:00 PM<br />
-                Sat: 8:00 AM - 2:00 PM<br />
-                <span style={{ color: 'var(--amber-glow)', fontWeight: '600' }}>24/7 Emergency Service</span>
-              </li>
-            </ul>
-            <Link href="/contact" className="footer-cta">
-              Request Free Quote →
-            </Link>
           </div>
 
           {/* Residential Services */}
@@ -65,6 +46,28 @@ export default function Footer() {
               <li><Link href="/our-services/commercial/test-tag">Test & Tag</Link></li>
               <li><Link href="/our-services/commercial">View All Services</Link></li>
             </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div className="footer-column">
+            <h4 className="footer-heading">Contact Us</h4>
+            <ul className="footer-contact">
+              <li>
+                <strong>Email:</strong><br />
+                <a href="mailto:info@jindabyneelectrician.com.au" style={{ color: 'var(--electric-blue)', textDecoration: 'none' }}>
+                  info@jindabyneelectrician.com.au
+                </a>
+              </li>
+              <li>
+                <strong>Hours:</strong><br />
+                Mon-Fri: 7:00 AM - 5:00 PM<br />
+                Sat: 8:00 AM - 2:00 PM<br />
+                <span style={{ color: 'var(--amber-glow)', fontWeight: '600' }}>24/7 Emergency Service</span>
+              </li>
+            </ul>
+            <Link href="/contact" className="footer-cta">
+              Request Free Quote →
+            </Link>
           </div>
         </div>
 
