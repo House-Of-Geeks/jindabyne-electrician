@@ -11,49 +11,70 @@ export const metadata = {
 const residentialServices = [
   {
     slug: 'lighting-power',
-    icon: '💡',
+    icon: 'bulb',
     title: 'General Electrical Services',
     description: 'LED lighting installations, power point additions, electrical repairs, and maintenance for your alpine home.',
     tag: 'Essential Services'
   },
   {
     slug: 'switchboard-upgrades',
-    icon: '⚙️',
+    icon: 'power',
     title: 'Switchboard Upgrades',
     description: 'Upgrade old fuse boxes to modern switchboards with safety switches and circuit breakers. Essential for alpine property safety.',
     tag: 'Safety Critical'
   },
   {
     slug: 'smoke-alarm-installation',
-    icon: '🔔',
+    icon: 'alarm',
     title: 'Smoke Alarm Installation',
     description: 'NSW compliant smoke detector installations and upgrades. Protect your family and meet legal requirements.',
     tag: 'Compliance Required'
   },
   {
     slug: 'starlink-installation',
-    icon: '📡',
+    icon: 'signal',
     title: 'Starlink Installation',
     description: 'Professional Starlink setup for rural Snowy Mountains properties. High-speed internet where NBN can\'t reach.',
     tag: 'High Demand'
   },
   {
+    slug: 'data-cabling-wifi',
+    icon: 'network',
+    title: 'Data Cabling & WiFi',
+    description: 'Cat6 data cabling, network points, and mesh WiFi systems. Reliable connectivity throughout your property.',
+    tag: 'Modern Essential'
+  },
+  {
     slug: 'underfloor-heating',
-    icon: '🔥',
+    icon: 'heating',
     title: 'Underfloor Heating',
     description: 'Electric underfloor heating installation for alpine homes. Premium comfort during Jindabyne winters.',
     tag: 'Alpine Specialist'
   },
   {
+    slug: 'split-system-heating-cooling',
+    icon: 'hvac',
+    title: 'Split System Heating & Cooling',
+    description: 'Licensed split system installation and servicing. Efficient heating for cold winters and cooling for summer.',
+    tag: 'Climate Control'
+  },
+  {
     slug: 'ev-charger-installation',
-    icon: '🚗',
+    icon: 'charging',
     title: 'EV Charger Installation',
     description: 'Tesla and universal EV charger installation. Pairs perfectly with solar for sustainable transport.',
     tag: 'Growing Category'
   },
   {
+    slug: 'security-systems-lighting',
+    icon: 'security',
+    title: 'Security Cameras & Lighting',
+    description: 'Security camera systems and motion-activated lighting. Remote monitoring for holiday homes.',
+    tag: 'Holiday Home Essential'
+  },
+  {
     slug: 'solar-battery',
-    icon: '☀️',
+    icon: 'solar',
     title: 'Solar & Battery Systems',
     description: 'Complete solar installations with optional battery storage. Off-grid and grid-tied systems for alpine properties.',
     tag: '$8-15K+ Value',
@@ -61,7 +82,7 @@ const residentialServices = [
   },
   {
     slug: 'battery-storage',
-    icon: '🔋',
+    icon: 'battery',
     title: 'Battery Storage',
     description: 'Tesla Powerwall, Sonnen & BYD battery systems. Protect against storm outages and reduce energy costs.',
     tag: '$10-20K+ Value',
@@ -69,7 +90,7 @@ const residentialServices = [
   },
   {
     slug: 'emergency-electrical',
-    icon: '🚨',
+    icon: 'emergency',
     title: 'Emergency Electrical',
     description: '24/7 emergency electrical service for Snowy Mountains properties. Fast response when you need it most.',
     tag: '24/7 Available'

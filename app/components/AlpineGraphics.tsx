@@ -291,6 +291,21 @@ export function ServiceIcon({ icon }: { icon: string }) {
         <circle cx="12" cy="12" r="9" stroke="#00D9FF" strokeWidth="2"/>
         <path d="M8 12l3 3 5-6" stroke="#FFB800" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
+    ),
+    hvac: (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="4" width="16" height="16" rx="2" stroke="#00D9FF" strokeWidth="2"/>
+        <circle cx="12" cy="12" r="4" stroke="#FFB800" strokeWidth="2"/>
+        <path d="M12 2v4M12 18v4M2 12h4M18 12h4" stroke="#00D9FF" strokeWidth="2" strokeLinecap="round"/>
+        <path d="M6 6l2 2M16 6l-2 2M6 18l2-2M16 18l-2-2" stroke="#FFB800" strokeWidth="1.5" strokeLinecap="round"/>
+      </svg>
+    ),
+    security: (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2L4 6v6c0 5.5 3.8 10.7 8 12 4.2-1.3 8-6.5 8-12V6l-8-4z" stroke="#00D9FF" strokeWidth="2"/>
+        <circle cx="12" cy="11" r="3" stroke="#FFB800" strokeWidth="2"/>
+        <path d="M12 14v3" stroke="#FFB800" strokeWidth="2" strokeLinecap="round"/>
+      </svg>
     )
   }
 
