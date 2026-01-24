@@ -14,7 +14,7 @@ export default function Footer() {
               <div className="logo-icon">⚡</div>
               <span>JINDABYNE ELECTRICIAN</span>
             </div>
-            <p style={{ color: 'var(--text-secondary)', marginTop: 'var(--space-md)', lineHeight: '1.6' }}>
+            <p style={{ color: 'var(--ice-white)', marginTop: 'var(--space-md)', lineHeight: '1.6' }}>
               Licensed electrical contractors serving the Snowy Mountains region.
               Specialists in solar, battery storage, and alpine electrical systems.
             </p>
