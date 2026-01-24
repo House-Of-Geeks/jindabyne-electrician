@@ -2,6 +2,7 @@ import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import CTASection from '../../../components/CTASection'
 import Link from 'next/link'
+import { ServiceSchema, BreadcrumbSchema } from '../../../../components/Schema'
 
 export const metadata = {
   title: 'Solar Panel Installation | Off-Grid Solar Systems | Jindabyne & Snowy Mountains',
@@ -35,8 +36,21 @@ const solarTypes = [
 const locations = ['Jindabyne', 'Thredbo', 'Perisher', 'Charlotte Pass', 'Berridale', 'Cooma']
 
 export default function SolarBatteryPage() {
+  const breadcrumbs = [
+    { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
+    { name: 'Services', url: 'https://jindabyneelectrician.com.au/our-services' },
+    { name: 'Residential', url: 'https://jindabyneelectrician.com.au/our-services/residential' },
+    { name: 'Solar Installation', url: 'https://jindabyneelectrician.com.au/our-services/residential/solar-battery' }
+  ]
+
   return (
     <>
+      <ServiceSchema
+        serviceName="Solar Panel Installation"
+        serviceDescription="Grid-tied and off-grid solar systems designed for alpine conditions. High-performance solar for holiday homes and remote properties in the Snowy Mountains."
+        serviceArea="Snowy Mountains"
+      />
+      <BreadcrumbSchema items={breadcrumbs} />
       <Header />
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>

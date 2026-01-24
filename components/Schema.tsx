@@ -267,3 +267,129 @@ export function ReviewSchema({
     />
   )
 }
+
+export function ArticleSchema({
+  title,
+  description,
+  publishDate,
+  modifiedDate,
+  authorName,
+  imageUrl,
+  keywords
+}: {
+  title: string
+  description: string
+  publishDate: string
+  modifiedDate?: string
+  authorName?: string
+  imageUrl?: string
+  keywords?: string[]
+}) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": title,
+    "description": description,
+    "datePublished": publishDate,
+    "dateModified": modifiedDate || publishDate,
+    "author": {
+      "@type": "Organization",
+      "name": authorName || "Jindabyne Electrician"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jindabyne Electrician",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://jindabyneelectrician.com.au/logo.png"
+      }
+    },
+    ...(imageUrl && {
+      "image": imageUrl
+    }),
+    ...(keywords && keywords.length > 0 && {
+      "keywords": keywords.join(", ")
+    })
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
+export function LocationBusinessSchema({
+  locationName,
+  description,
+  postalCode
+}: {
+  locationName: string
+  description: string
+  postalCode: string
+}) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Electrician",
+    "name": `Jindabyne Electrician - ${locationName}`,
+    "description": description,
+    "url": `https://jindabyneelectrician.com.au/service-areas/${locationName.toLowerCase().replace(/\s+/g, '-')}`,
+    "telephone": "+61-XXX-XXX-XXX",
+    "email": "info@jindabyneelectrician.com.au",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": locationName,
+      "addressRegion": "NSW",
+      "postalCode": postalCode,
+      "addressCountry": "AU"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": locationName
+    },
+    "priceRange": "$$"
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
+export function OrganizationSchema() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Jindabyne Electrician",
+    "url": "https://jindabyneelectrician.com.au",
+    "logo": "https://jindabyneelectrician.com.au/logo.png",
+    "description": "Licensed electricians serving the Snowy Mountains region. Specialists in solar installation, battery storage, and alpine electrical systems.",
+    "email": "info@jindabyneelectrician.com.au",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Jindabyne",
+      "addressRegion": "NSW",
+      "postalCode": "2627",
+      "addressCountry": "AU"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "email": "info@jindabyneelectrician.com.au",
+      "availableLanguage": "English"
+    },
+    "sameAs": [
+      "https://jindabyneelectrician.com.au"
+    ]
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}

@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import CTASection from '../../../components/CTASection'
+import { ServiceSchema, BreadcrumbSchema } from '../../../../components/Schema'
 
 export const metadata = {
   title: 'Underfloor Heating Installation | Electric Floor Heating | Jindabyne',
@@ -9,8 +10,21 @@ export const metadata = {
 }
 
 export default function UnderfloorHeatingPage() {
+  const breadcrumbs = [
+    { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
+    { name: 'Services', url: 'https://jindabyneelectrician.com.au/our-services' },
+    { name: 'Residential', url: 'https://jindabyneelectrician.com.au/our-services/residential' },
+    { name: 'Underfloor Heating', url: 'https://jindabyneelectrician.com.au/our-services/residential/underfloor-heating' }
+  ]
+
   return (
     <>
+      <ServiceSchema
+        serviceName="Underfloor Heating Installation"
+        serviceDescription="Electric underfloor heating installation for alpine homes. Premium comfort for Jindabyne winters with energy-efficient heated floors."
+        serviceArea="Jindabyne & Snowy Mountains"
+      />
+      <BreadcrumbSchema items={breadcrumbs} />
       <Header />
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>

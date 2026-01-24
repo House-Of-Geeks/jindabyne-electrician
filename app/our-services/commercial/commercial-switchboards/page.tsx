@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import CTASection from '../../../components/CTASection'
+import { ServiceSchema, BreadcrumbSchema } from '../../../../components/Schema'
 
 export const metadata = {
   title: 'Commercial Switchboard Upgrades | Three-Phase Power | Jindabyne',
@@ -9,8 +10,21 @@ export const metadata = {
 }
 
 export default function CommercialSwitchboardsPage() {
+  const breadcrumbs = [
+    { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
+    { name: 'Services', url: 'https://jindabyneelectrician.com.au/our-services' },
+    { name: 'Commercial', url: 'https://jindabyneelectrician.com.au/our-services/commercial' },
+    { name: 'Commercial Switchboards', url: 'https://jindabyneelectrician.com.au/our-services/commercial/commercial-switchboards' }
+  ]
+
   return (
     <>
+      <ServiceSchema
+        serviceName="Commercial Switchboard Upgrades"
+        serviceDescription="Commercial switchboard upgrades and three-phase power installations for Jindabyne businesses. Handle increased loads from modern commercial equipment with upgraded switchboards, three-phase installations, and proper load assessment."
+        serviceArea="Jindabyne & Snowy Mountains"
+      />
+      <BreadcrumbSchema items={breadcrumbs} />
       <Header />
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>

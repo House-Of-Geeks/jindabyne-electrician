@@ -1,6 +1,7 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import CTASection from '../components/CTASection'
+import { OrganizationSchema } from '../../components/Schema'
 
 export const metadata = {
   title: 'About Us | Jindabyne Electrician | Licensed Electrical Services',
@@ -10,6 +11,7 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <>
+      <OrganizationSchema />
       <Header />
       <main>
         <section className="hero" style={{ minHeight: '50vh' }}>

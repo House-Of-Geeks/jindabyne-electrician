@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import CTASection from '../../../components/CTASection'
+import { ServiceSchema, BreadcrumbSchema } from '../../../../components/Schema'
 
 export const metadata = {
   title: 'EV Charger Installation | Tesla Charger | Jindabyne Electrician',
@@ -9,8 +10,21 @@ export const metadata = {
 }
 
 export default function EVChargerPage() {
+  const breadcrumbs = [
+    { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
+    { name: 'Services', url: 'https://jindabyneelectrician.com.au/our-services' },
+    { name: 'Residential', url: 'https://jindabyneelectrician.com.au/our-services/residential' },
+    { name: 'EV Charger Installation', url: 'https://jindabyneelectrician.com.au/our-services/residential/ev-charger-installation' }
+  ]
+
   return (
     <>
+      <ServiceSchema
+        serviceName="EV Charger Installation"
+        serviceDescription="Electric vehicle charger installation for Snowy Mountains homes. Tesla Wall Connector, universal EV chargers, and solar-integrated charging solutions."
+        serviceArea="Jindabyne & Snowy Mountains"
+      />
+      <BreadcrumbSchema items={breadcrumbs} />
       <Header />
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>

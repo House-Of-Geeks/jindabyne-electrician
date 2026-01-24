@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import CTASection from '../../../components/CTASection'
+import { ServiceSchema, BreadcrumbSchema } from '../../../../components/Schema'
 
 export const metadata = {
   title: 'Retail & Hospitality Electrical | Cafes, Shops | Jindabyne',
@@ -9,8 +10,21 @@ export const metadata = {
 }
 
 export default function RetailHospitalityPage() {
+  const breadcrumbs = [
+    { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
+    { name: 'Services', url: 'https://jindabyneelectrician.com.au/our-services' },
+    { name: 'Commercial', url: 'https://jindabyneelectrician.com.au/our-services/commercial' },
+    { name: 'Retail & Hospitality', url: 'https://jindabyneelectrician.com.au/our-services/commercial/retail-hospitality' }
+  ]
+
   return (
     <>
+      <ServiceSchema
+        serviceName="Retail & Hospitality Electrical"
+        serviceDescription="Commercial electrical services for retail shops, cafes, restaurants, and hospitality businesses in Jindabyne and Snowy Mountains. Complete fit-outs, commercial kitchen power, display lighting, and EFTPOS infrastructure."
+        serviceArea="Jindabyne & Snowy Mountains"
+      />
+      <BreadcrumbSchema items={breadcrumbs} />
       <Header />
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>

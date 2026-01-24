@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import CTASection from '../../../components/CTASection'
+import { ServiceSchema, BreadcrumbSchema } from '../../../../components/Schema'
 
 export const metadata = {
   title: 'Ski Lodge & Accommodation Electrical | Jindabyne Electrician',
@@ -9,8 +10,21 @@ export const metadata = {
 }
 
 export default function SkiLodgePage() {
+  const breadcrumbs = [
+    { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
+    { name: 'Services', url: 'https://jindabyneelectrician.com.au/our-services' },
+    { name: 'Commercial', url: 'https://jindabyneelectrician.com.au/our-services/commercial' },
+    { name: 'Ski Lodge & Accommodation', url: 'https://jindabyneelectrician.com.au/our-services/commercial/ski-lodge-accommodation' }
+  ]
+
   return (
     <>
+      <ServiceSchema
+        serviceName="Ski Lodge & Accommodation Electrical"
+        serviceDescription="Specialized electrical services for ski lodges, hotels, and accommodation providers in the Snowy Mountains. Guest room fit-outs, commercial kitchen electrical, underfloor heating, EV charging stations, and fire safety compliance."
+        serviceArea="Jindabyne & Snowy Mountains"
+      />
+      <BreadcrumbSchema items={breadcrumbs} />
       <Header />
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>

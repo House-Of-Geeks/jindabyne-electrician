@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import CTASection from '../../../components/CTASection'
+import { ServiceSchema, BreadcrumbSchema } from '../../../../components/Schema'
 
 export const metadata = {
   title: 'Test & Tag Services | Electrical Safety Testing | Jindabyne',
@@ -9,8 +10,21 @@ export const metadata = {
 }
 
 export default function TestTagPage() {
+  const breadcrumbs = [
+    { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
+    { name: 'Services', url: 'https://jindabyneelectrician.com.au/our-services' },
+    { name: 'Commercial', url: 'https://jindabyneelectrician.com.au/our-services/commercial' },
+    { name: 'Test & Tag', url: 'https://jindabyneelectrician.com.au/our-services/commercial/test-tag' }
+  ]
+
   return (
     <>
+      <ServiceSchema
+        serviceName="Test & Tag Services"
+        serviceDescription="Professional test and tag services for Jindabyne businesses. Electrical appliance safety testing for workplace compliance and insurance requirements. Testing for construction sites, accommodation facilities, and commercial equipment."
+        serviceArea="Jindabyne & Snowy Mountains"
+      />
+      <BreadcrumbSchema items={breadcrumbs} />
       <Header />
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>

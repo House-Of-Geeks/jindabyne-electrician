@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import CTASection from '../../../components/CTASection'
+import { ServiceSchema, BreadcrumbSchema } from '../../../../components/Schema'
 
 export const metadata = {
   title: 'Commercial Solar Systems | Business Solar | Jindabyne Electrician',
@@ -9,8 +10,21 @@ export const metadata = {
 }
 
 export default function CommercialSolarPage() {
+  const breadcrumbs = [
+    { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
+    { name: 'Services', url: 'https://jindabyneelectrician.com.au/our-services' },
+    { name: 'Commercial', url: 'https://jindabyneelectrician.com.au/our-services/commercial' },
+    { name: 'Commercial Solar', url: 'https://jindabyneelectrician.com.au/our-services/commercial/commercial-solar' }
+  ]
+
   return (
     <>
+      <ServiceSchema
+        serviceName="Commercial Solar Systems"
+        serviceDescription="Commercial solar installations for Jindabyne and Snowy Mountains businesses. Reduce operating costs with solar power for retail, hospitality, and accommodation. 20kW to 100kW+ systems with commercial battery storage options."
+        serviceArea="Jindabyne & Snowy Mountains"
+      />
+      <BreadcrumbSchema items={breadcrumbs} />
       <Header />
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>

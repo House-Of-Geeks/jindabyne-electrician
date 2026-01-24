@@ -2,6 +2,7 @@ import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import CTASection from '../../../components/CTASection'
 import Link from 'next/link'
+import { ServiceSchema, BreadcrumbSchema } from '../../../../components/Schema'
 
 export const metadata = {
   title: 'Starlink Installation | Professional Setup | Jindabyne, Thredbo & Snowy Mountains',
@@ -12,8 +13,21 @@ export const metadata = {
 const locations = ['Jindabyne', 'Thredbo', 'Perisher', 'Charlotte Pass', 'Berridale', 'Cooma']
 
 export default function StarlinkInstallationPage() {
+  const breadcrumbs = [
+    { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
+    { name: 'Services', url: 'https://jindabyneelectrician.com.au/our-services' },
+    { name: 'Residential', url: 'https://jindabyneelectrician.com.au/our-services/residential' },
+    { name: 'Starlink Installation', url: 'https://jindabyneelectrician.com.au/our-services/residential/starlink-installation' }
+  ]
+
   return (
     <>
+      <ServiceSchema
+        serviceName="Starlink Installation"
+        serviceDescription="Professional Starlink installation for rural Snowy Mountains properties. Reliable high-speed internet where NBN can't reach."
+        serviceArea="Jindabyne & Snowy Mountains"
+      />
+      <BreadcrumbSchema items={breadcrumbs} />
       <Header />
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>

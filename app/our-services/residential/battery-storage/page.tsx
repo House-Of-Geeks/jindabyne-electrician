@@ -2,6 +2,7 @@ import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import CTASection from '../../../components/CTASection'
 import Link from 'next/link'
+import { ServiceSchema, BreadcrumbSchema } from '../../../../components/Schema'
 
 export const metadata = {
   title: 'Battery Storage Installation | Tesla Powerwall | Jindabyne & Snowy Mountains',
@@ -33,8 +34,21 @@ const batteryBrands = [
 const locations = ['Jindabyne', 'Thredbo', 'Perisher', 'Charlotte Pass', 'Berridale', 'Cooma']
 
 export default function BatteryStoragePage() {
+  const breadcrumbs = [
+    { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
+    { name: 'Services', url: 'https://jindabyneelectrician.com.au/our-services' },
+    { name: 'Residential', url: 'https://jindabyneelectrician.com.au/our-services/residential' },
+    { name: 'Battery Storage', url: 'https://jindabyneelectrician.com.au/our-services/residential/battery-storage' }
+  ]
+
   return (
     <>
+      <ServiceSchema
+        serviceName="Battery Storage Installation"
+        serviceDescription="Home battery storage systems for Snowy Mountains properties. Tesla Powerwall, Sonnen, BYD. Protect against power outages and reduce electricity costs."
+        serviceArea="Jindabyne & Snowy Mountains"
+      />
+      <BreadcrumbSchema items={breadcrumbs} />
       <Header />
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>

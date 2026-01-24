@@ -22,7 +22,11 @@ export default function Footer() {
 
           {/* Residential Services */}
           <div className="footer-column">
-            <h4 className="footer-heading">Residential Services</h4>
+            <h4 className="footer-heading">
+              <Link href="/our-services/residential" style={{ textDecoration: 'none', color: 'inherit' }}>
+                Residential Services
+              </Link>
+            </h4>
             <ul className="footer-links">
               <li><Link href="/our-services/residential/solar-battery">Solar Installation</Link></li>
               <li><Link href="/our-services/residential/battery-storage">Battery Storage</Link></li>
@@ -36,7 +40,11 @@ export default function Footer() {
 
           {/* Commercial Services */}
           <div className="footer-column">
-            <h4 className="footer-heading">Commercial Services</h4>
+            <h4 className="footer-heading">
+              <Link href="/our-services/commercial" style={{ textDecoration: 'none', color: 'inherit' }}>
+                Commercial Services
+              </Link>
+            </h4>
             <ul className="footer-links">
               <li><Link href="/our-services/commercial/ski-lodge-accommodation">Ski Lodges</Link></li>
               <li><Link href="/our-services/commercial/retail-hospitality">Retail & Hospitality</Link></li>

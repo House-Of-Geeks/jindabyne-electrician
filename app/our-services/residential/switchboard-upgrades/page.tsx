@@ -2,6 +2,7 @@ import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import CTASection from '../../../components/CTASection'
 import Link from 'next/link'
+import { ServiceSchema, BreadcrumbSchema } from '../../../../components/Schema'
 
 export const metadata = {
   title: 'Switchboard Upgrades | Electrical Panel Replacement | Jindabyne',
@@ -12,8 +13,21 @@ export const metadata = {
 const locations = ['Jindabyne', 'Thredbo', 'Perisher', 'Charlotte Pass', 'Berridale', 'Cooma']
 
 export default function SwitchboardUpgradesPage() {
+  const breadcrumbs = [
+    { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
+    { name: 'Services', url: 'https://jindabyneelectrician.com.au/our-services' },
+    { name: 'Residential', url: 'https://jindabyneelectrician.com.au/our-services/residential' },
+    { name: 'Switchboard Upgrades', url: 'https://jindabyneelectrician.com.au/our-services/residential/switchboard-upgrades' }
+  ]
+
   return (
     <>
+      <ServiceSchema
+        serviceName="Switchboard Upgrades"
+        serviceDescription="Switchboard upgrades and electrical panel replacements for Jindabyne & Snowy Mountains homes. Safety switches, circuit breakers, and modern switchboards."
+        serviceArea="Jindabyne & Snowy Mountains"
+      />
+      <BreadcrumbSchema items={breadcrumbs} />
       <Header />
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>

@@ -6,6 +6,7 @@ import Footer from '../../components/Footer'
 import CTASection from '../../components/CTASection'
 import { blogPosts } from '../../../data/blog'
 import { notFound } from 'next/navigation'
+import { ArticleSchema, BreadcrumbSchema } from '../../../components/Schema'
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = blogPosts.find((p) => p.slug === params.slug)
@@ -19,8 +20,21 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     .filter((p) => p.category === post.category && p.slug !== post.slug)
     .slice(0, 2)
 
+  const breadcrumbs = [
+    { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
+    { name: 'Blog', url: 'https://jindabyneelectrician.com.au/blog' },
+    { name: post.title, url: `https://jindabyneelectrician.com.au/blog/${post.slug}` }
+  ]
+
   return (
     <>
+      <ArticleSchema
+        title={post.title}
+        description={post.metaDescription}
+        publishDate={post.date}
+        keywords={post.keywords}
+      />
+      <BreadcrumbSchema items={breadcrumbs} />
       <Header />
       <main>
         <article>
