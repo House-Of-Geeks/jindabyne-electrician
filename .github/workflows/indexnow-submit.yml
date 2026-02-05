@@ -1,14 +1,9 @@
-name: Submit URLs to IndexNow                                                                                                
+ name: Submit URLs to IndexNow                                                                                                
                                                                                                                                
   on:                                                                                                                          
     push:                                                                                                                      
-      branches:                                                                                                                
-        - main                                                                                                                 
-      paths:                                                                                                                   
-        - 'app/**'                                                                                                             
-        - 'data/**'                                                                                                            
-        - 'public/**'                                                                                                          
-                                                                                                                               
+      branches: [main]                                                                                                         
+      paths: ['app/**', 'data/**', 'public/**']                                                                                
     workflow_dispatch:                                                                                                         
       inputs:                                                                                                                  
         full_submit:                                                                                                           
@@ -81,4 +76,4 @@ name: Submit URLs to IndexNow
           if: success()                                                                                                        
           run: |                                                                                                               
             echo "IndexNow submission completed"                                                                               
-            echo "Timestamp: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"    
+            echo "Timestamp: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"   
