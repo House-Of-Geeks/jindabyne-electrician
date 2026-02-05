@@ -1,4 +1,4 @@
- name: IndexNow New Pages                                                                                                     
+name: IndexNow New Pages                                                                                                     
                                                                                                                                
   on:                                                                                                                          
     push:                                                                                                                      
@@ -27,4 +27,4 @@
         - name: Wait for deploy                                                                                                
           run: sleep 120                                                                                                       
                                                                                                                                
-        - run: npx tsx scripts/indexnow-diff.ts  
+        - run: npx tsx scripts/indexnow-diff.ts    
