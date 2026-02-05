@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Outfit, JetBrains_Mono } from 'next/font/google'
-import Script from 'next/script'
+import ClarityAnalytics from './components/ClarityAnalytics'
 import './globals.css'
 import './alpine-technical.css'
 
@@ -29,21 +29,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${outfit.variable} ${jetbrainsMono.variable}`}>
-      <head>
-        <Script
-          id="microsoft-clarity"
-          strategy="afterInteractive"
-        >
-          {`
-            (function(c,l,a,r,i,t,y){
-              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "vckjjmow3c");
-          `}
-        </Script>
-      </head>
       <body>
+        <ClarityAnalytics />
         <div className="bg-gradient" />
         <div className="noise-overlay" />
         {children}
