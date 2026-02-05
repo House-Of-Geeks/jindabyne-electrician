@@ -3,6 +3,12 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { Metadata } from 'next'
 import { blogPosts } from '../../data/blog'
+import { BreadcrumbSchema } from '../../components/Schema'
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
+  { name: 'Blog', url: 'https://jindabyneelectrician.com.au/blog' }
+]
 
 export const metadata: Metadata = {
   title: 'Electrical Tips & Guides | Jindabyne Electrician Blog',
@@ -17,6 +23,7 @@ export default function BlogPage() {
 
   return (
     <>
+      <BreadcrumbSchema items={breadcrumbs} />
       <Header />
       <main>
         <section className="hero" style={{ minHeight: '50vh' }}>

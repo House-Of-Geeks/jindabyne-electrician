@@ -3,6 +3,12 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import CTASection from '../components/CTASection'
 import { Metadata } from 'next'
+import { BreadcrumbSchema } from '../../components/Schema'
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
+  { name: 'Service Areas', url: 'https://jindabyneelectrician.com.au/service-areas' }
+]
 
 export const metadata: Metadata = {
   title: 'Service Areas | Electrician Serving Jindabyne, Thredbo & Snowy Mountains',
@@ -99,6 +105,7 @@ const locations = [
 export default function ServiceAreasPage() {
   return (
     <>
+      <BreadcrumbSchema items={breadcrumbs} />
       <Header />
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>

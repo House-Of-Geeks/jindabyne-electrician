@@ -1,6 +1,12 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import ContactForm from '../components/ContactForm'
+import { BreadcrumbSchema } from '../../components/Schema'
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
+  { name: 'Contact', url: 'https://jindabyneelectrician.com.au/contact' }
+]
 
 export const metadata = {
   title: 'Contact Us | Get Free Quote | Jindabyne Electrician',
@@ -10,6 +16,7 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <>
+      <BreadcrumbSchema items={breadcrumbs} />
       <Header />
       <main>
         <section className="hero" style={{ minHeight: '50vh' }}>

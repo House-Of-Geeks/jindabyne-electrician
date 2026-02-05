@@ -1,6 +1,12 @@
 import Link from 'next/link'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import { BreadcrumbSchema } from '../../components/Schema'
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
+  { name: 'Privacy Policy', url: 'https://jindabyneelectrician.com.au/privacy' }
+]
 
 export const metadata = {
   title: 'Privacy Policy | Jindabyne Electrician',
@@ -12,6 +18,7 @@ export default function PrivacyPage() {
 
   return (
     <>
+      <BreadcrumbSchema items={breadcrumbs} />
       <Header />
       <main>
         <section className="hero" style={{ minHeight: '40vh' }}>
