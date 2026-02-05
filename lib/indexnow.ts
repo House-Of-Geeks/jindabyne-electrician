@@ -5,7 +5,7 @@
  * https://www.indexnow.org/
  */
 
-const INDEXNOW_KEY = '710e32a908824dadaa14b1535c3f1392';
+const INDEXNOW_KEY = 'af5101cb946a4263b64f188ed0ef5a70';
 const SITE_HOST = 'www.jindabyneelectrician.com.au';
 const INDEXNOW_ENDPOINT = 'https://api.indexnow.org/indexnow';
 
