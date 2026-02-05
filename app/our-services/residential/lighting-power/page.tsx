@@ -3,6 +3,7 @@ import Footer from '../../../components/Footer'
 import CTASection from '../../../components/CTASection'
 import Link from 'next/link'
 import { BreadcrumbSchema } from '../../../../components/Schema'
+import Breadcrumb from '../../../components/Breadcrumb'
 
 export const metadata = {
   title: 'General Electrical Services | Electrician Jindabyne | Snowy Mountains',
@@ -30,6 +31,7 @@ export default function LightingPowerPage() {
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>
           <div className="hero-content">
+            <Breadcrumb items={breadcrumbs} />
             <span className="hero-badge">Essential Electrical Services</span>
             <h1>General Electrical Services</h1>
             <p className="hero-subtitle">

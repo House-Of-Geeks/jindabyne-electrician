@@ -3,6 +3,7 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import CTASection from '../../components/CTASection'
 import PageMetadata from '../../components/PageMetadata'
+import Breadcrumb from '../../components/Breadcrumb'
 import { LocationBusinessSchema, BreadcrumbSchema } from '../../../components/Schema'
 import { Metadata } from 'next'
 import locationsData from '../../../data/locations.json'
@@ -523,6 +524,7 @@ export default function ServiceAreaPage({ params }: { params: { location: string
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>
           <div className="hero-content">
+            <Breadcrumb items={breadcrumbs} />
             <span className="hero-badge">Service Area: {location.name}</span>
             <h1>Electrician in {location.name} & Surrounding Areas</h1>
             <p className="hero-subtitle">

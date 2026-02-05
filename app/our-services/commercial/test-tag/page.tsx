@@ -3,6 +3,7 @@ import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import CTASection from '../../../components/CTASection'
 import { ServiceSchema, BreadcrumbSchema } from '../../../../components/Schema'
+import Breadcrumb from '../../../components/Breadcrumb'
 
 export const metadata = {
   title: 'Test & Tag Services | Electrical Safety Testing | Jindabyne',
@@ -32,6 +33,7 @@ export default function TestTagPage() {
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>
           <div className="hero-content">
+            <Breadcrumb items={breadcrumbs} />
             <span className="hero-badge">Workplace Safety</span>
             <h1>Test & Tag Services</h1>
             <p className="hero-subtitle">

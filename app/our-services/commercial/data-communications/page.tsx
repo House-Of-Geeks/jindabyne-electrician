@@ -3,6 +3,7 @@ import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import CTASection from '../../../components/CTASection'
 import { BreadcrumbSchema } from '../../../../components/Schema'
+import Breadcrumb from '../../../components/Breadcrumb'
 
 export const metadata = {
   title: 'Data & Communications Cabling | Network Installation | Jindabyne',
@@ -27,6 +28,7 @@ export default function DataCommunicationsPage() {
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>
           <div className="hero-content">
+            <Breadcrumb items={breadcrumbs} />
             <span className="hero-badge">Commercial IT</span>
             <h1>Data & Communications</h1>
             <p className="hero-subtitle">

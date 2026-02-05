@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import CTASection from '../../../components/CTASection'
+import Breadcrumb from '../../../components/Breadcrumb'
 import { ServiceSchema, BreadcrumbSchema } from '../../../../components/Schema'
 import { ServiceIcon } from '../../../components/AlpineGraphics'
 import { Metadata } from 'next'
@@ -353,6 +354,7 @@ export default function ServiceLocationPage({ params }: { params: { location: st
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>
           <div className="hero-content">
+            <Breadcrumb items={breadcrumbs} />
             <span className="hero-badge">{location.name} {categoryLabel}</span>
             <h1>{service.name} {location.preposition} {location.name}</h1>
             <p className="hero-subtitle">

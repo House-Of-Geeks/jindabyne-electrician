@@ -3,6 +3,7 @@ import Footer from '../../../components/Footer'
 import CTASection from '../../../components/CTASection'
 import Link from 'next/link'
 import { ServiceSchema, BreadcrumbSchema } from '../../../../components/Schema'
+import Breadcrumb from '../../../components/Breadcrumb'
 
 export const metadata = {
   title: 'Starlink Installation | Professional Setup | Jindabyne, Thredbo & Snowy Mountains',
@@ -35,6 +36,7 @@ export default function StarlinkInstallationPage() {
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>
           <div className="hero-content">
+            <Breadcrumb items={breadcrumbs} />
             <span className="hero-badge">High Demand Service</span>
             <h1>Professional Starlink Installation for Rural Properties</h1>
             <p className="hero-subtitle">

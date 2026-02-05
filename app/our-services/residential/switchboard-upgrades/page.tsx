@@ -3,6 +3,7 @@ import Footer from '../../../components/Footer'
 import CTASection from '../../../components/CTASection'
 import Link from 'next/link'
 import { ServiceSchema, BreadcrumbSchema } from '../../../../components/Schema'
+import Breadcrumb from '../../../components/Breadcrumb'
 
 export const metadata = {
   title: 'Switchboard Upgrades | Electrical Panel Replacement | Jindabyne',
@@ -35,6 +36,7 @@ export default function SwitchboardUpgradesPage() {
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>
           <div className="hero-content">
+            <Breadcrumb items={breadcrumbs} />
             <span className="hero-badge">Safety Critical Service</span>
             <h1>Switchboard Upgrades for Alpine Homes</h1>
             <p className="hero-subtitle">

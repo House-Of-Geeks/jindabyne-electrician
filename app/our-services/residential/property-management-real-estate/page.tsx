@@ -3,6 +3,7 @@ import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import CTASection from '../../../components/CTASection'
 import { BreadcrumbSchema } from '../../../../components/Schema'
+import Breadcrumb from '../../../components/Breadcrumb'
 
 export const metadata = {
   title: 'Property Management & Real Estate Electrical Services | Jindabyne',
@@ -27,6 +28,7 @@ export default function PropertyManagementPage() {
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>
           <div className="hero-content">
+            <Breadcrumb items={breadcrumbs} />
             <span className="hero-badge">Property Management</span>
             <h1>Property Management & Real Estate Electrical Services</h1>
             <p className="hero-subtitle">

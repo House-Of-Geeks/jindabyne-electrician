@@ -3,6 +3,7 @@ import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import CTASection from '../../../components/CTASection'
 import { BreadcrumbSchema } from '../../../../components/Schema'
+import Breadcrumb from '../../../components/Breadcrumb'
 
 export const metadata = {
   title: 'Split System Heating & Cooling Installation | Jindabyne Electrician',
@@ -27,6 +28,7 @@ export default function SplitSystemPage() {
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>
           <div className="hero-content">
+            <Breadcrumb items={breadcrumbs} />
             <span className="hero-badge">Climate Control</span>
             <h1>Split System Heating & Cooling Installation</h1>
             <p className="hero-subtitle">

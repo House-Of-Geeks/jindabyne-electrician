@@ -4,6 +4,7 @@ import Footer from '../../components/Footer'
 import CTASection from '../../components/CTASection'
 import PageMetadata from '../../components/PageMetadata'
 import { BreadcrumbSchema } from '../../../components/Schema'
+import Breadcrumb from '../../components/Breadcrumb'
 
 export const metadata = {
   title: 'Residential Electrical Services | Jindabyne Electrician | Snowy Mountains',
@@ -123,6 +124,7 @@ export default function ResidentialServicesPage() {
       <main>
         <section className="hero" style={{ minHeight: '50vh' }}>
           <div className="hero-content">
+            <Breadcrumb items={breadcrumbs} />
             <span className="hero-badge">Residential Services</span>
             <h1>Electrical Services for Snowy Mountains Homes</h1>
             <p className="hero-subtitle">

@@ -1,6 +1,7 @@
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import CTASection from '../../../components/CTASection'
+import Breadcrumb from '../../../components/Breadcrumb'
 import Link from 'next/link'
 import { ServiceSchema, BreadcrumbSchema } from '../../../../components/Schema'
 
@@ -58,6 +59,7 @@ export default function SolarBatteryPage() {
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>
           <div className="hero-content">
+            <Breadcrumb items={breadcrumbs} />
             <span className="hero-badge">$8-15K+ Investment</span>
             <h1>Solar Installation for Snowy Mountains Properties</h1>
             <p className="hero-subtitle">

@@ -3,6 +3,7 @@ import Footer from '../../../components/Footer'
 import CTASection from '../../../components/CTASection'
 import Link from 'next/link'
 import { ServiceSchema, BreadcrumbSchema } from '../../../../components/Schema'
+import Breadcrumb from '../../../components/Breadcrumb'
 
 export const metadata = {
   title: 'Battery Storage Installation | Tesla Powerwall | Jindabyne & Snowy Mountains',
@@ -56,6 +57,7 @@ export default function BatteryStoragePage() {
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>
           <div className="hero-content">
+            <Breadcrumb items={breadcrumbs} />
             <span className="hero-badge">$10-20K+ Investment</span>
             <h1>Battery Storage Systems for Snowy Mountains Homes</h1>
             <p className="hero-subtitle">
