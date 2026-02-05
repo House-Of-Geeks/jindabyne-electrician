@@ -1,79 +1,30 @@
- name: Submit URLs to IndexNow                                                                                                
+ name: IndexNow New Pages                                                                                                     
                                                                                                                                
   on:                                                                                                                          
     push:                                                                                                                      
       branches: [main]                                                                                                         
-      paths: ['app/**', 'data/**', 'public/**']                                                                                
-    workflow_dispatch:                                                                                                         
-      inputs:                                                                                                                  
-        full_submit:                                                                                                           
-          description: 'Submit ALL URLs (not just new ones)'                                                                   
-          required: false                                                                                                      
-          default: 'false'                                                                                                     
-          type: boolean                                                                                                        
-        dry_run:                                                                                                               
-          description: 'Dry run (preview without submitting)'                                                                  
-          required: false                                                                                                      
-          default: 'false'                                                                                                     
-          type: boolean                                                                                                        
                                                                                                                                
   jobs:                                                                                                                        
-    submit-indexnow:                                                                                                           
+    notify:                                                                                                                    
       runs-on: ubuntu-latest                                                                                                   
-                                                                                                                               
       steps:                                                                                                                   
-        - name: Checkout repository                                                                                            
-          uses: actions/checkout@v4                                                                                            
+        - uses: actions/checkout@v4                                                                                            
                                                                                                                                
-        - name: Setup Node.js                                                                                                  
-          uses: actions/setup-node@v4                                                                                          
+        - uses: actions/setup-node@v4                                                                                          
           with:                                                                                                                
-            node-version: '20'                                                                                                 
+            node-version: "20"                                                                                                 
+            cache: "npm"                                                                                                       
                                                                                                                                
         - name: Install dependencies                                                                                           
-          run: npm ci                                                                                                          
+          run: npm ci --ignore-scripts                                                                                         
                                                                                                                                
-        - name: Restore IndexNow URL cache                                                                                     
-          uses: actions/cache@v4                                                                                               
+        - uses: actions/cache@v4                                                                                               
           with:                                                                                                                
             path: .indexnow-cache.json                                                                                         
             key: indexnow-urls-${{ github.sha }}                                                                               
-            restore-keys: |                                                                                                    
-              indexnow-urls-                                                                                                   
+            restore-keys: indexnow-urls-                                                                                       
                                                                                                                                
-        - name: Wait for Vercel deployment                                                                                     
-          if: github.event_name == 'push'                                                                                      
-          run: |                                                                                                               
-            echo "Waiting 120 seconds for Vercel deployment..."                                                                
-            sleep 120                                                                                                          
+        - name: Wait for deploy                                                                                                
+          run: sleep 120                                                                                                       
                                                                                                                                
-        - name: Submit to IndexNow (differential)                                                                              
-          if: github.event.inputs.full_submit != 'true'                                                                        
-          run: |                                                                                                               
-            if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then                                                         
-              npx tsx scripts/indexnow-diff.ts --dry-run                                                                       
-            else                                                                                                               
-              npx tsx scripts/indexnow-diff.ts                                                                                 
-            fi                                                                                                                 
-                                                                                                                               
-        - name: Submit to IndexNow (full sitemap)                                                                              
-          if: github.event.inputs.full_submit == 'true'                                                                        
-          run: |                                                                                                               
-            if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then                                                         
-              npx tsx scripts/indexnow-submit.ts --dry-run                                                                     
-            else                                                                                                               
-              npx tsx scripts/indexnow-submit.ts                                                                               
-            fi                                                                                                                 
-                                                                                                                               
-        - name: Save updated cache                                                                                             
-          if: success() && github.event.inputs.dry_run != 'true'                                                               
-          uses: actions/cache/save@v4                                                                                          
-          with:                                                                                                                
-            path: .indexnow-cache.json                                                                                         
-            key: indexnow-urls-${{ github.sha }}                                                                               
-                                                                                                                               
-        - name: Log result                                                                                                     
-          if: success()                                                                                                        
-          run: |                                                                                                               
-            echo "IndexNow submission completed"                                                                               
-            echo "Timestamp: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"   
+        - run: npx tsx scripts/indexnow-diff.ts      
