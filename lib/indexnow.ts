@@ -6,7 +6,7 @@
  */
 
 const INDEXNOW_KEY = '710e32a908824dadaa14b1535c3f1392';
-const SITE_HOST = 'jindabyneelectrician.com.au';
+const SITE_HOST = 'www.jindabyneelectrician.com.au';
 const INDEXNOW_ENDPOINT = 'https://api.indexnow.org/indexnow';
 
 export interface IndexNowResponse {
