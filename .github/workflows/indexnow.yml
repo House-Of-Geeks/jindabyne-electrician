@@ -27,4 +27,4 @@
         - name: Wait for deploy                                                                                                
           run: sleep 120                                                                                                       
                                                                                                                                
-        - run: npx tsx scripts/indexnow-diff.ts      
+        - run: npx tsx scripts/indexnow-diff.ts  
