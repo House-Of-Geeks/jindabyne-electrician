@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import CTASection from '../../../components/CTASection'
+import { BreadcrumbSchema } from '../../../../components/Schema'
 
 export const metadata = {
   title: 'Property Management & Real Estate Electrical Services | Jindabyne',
@@ -11,9 +12,17 @@ export const metadata = {
   },
 }
 
+const breadcrumbs = [
+  { name: 'Home', url: 'https://www.jindabyneelectrician.com.au' },
+  { name: 'Services', url: 'https://www.jindabyneelectrician.com.au/our-services' },
+  { name: 'Residential', url: 'https://www.jindabyneelectrician.com.au/our-services/residential' },
+  { name: 'Property Management', url: 'https://www.jindabyneelectrician.com.au/our-services/residential/property-management-real-estate' }
+]
+
 export default function PropertyManagementPage() {
   return (
     <>
+      <BreadcrumbSchema items={breadcrumbs} />
       <Header />
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>

@@ -3,6 +3,7 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import CTASection from '../../components/CTASection'
 import PageMetadata from '../../components/PageMetadata'
+import { BreadcrumbSchema } from '../../../components/Schema'
 
 export const metadata = {
   title: 'Residential Electrical Services | Jindabyne Electrician | Snowy Mountains',
@@ -11,6 +12,12 @@ export const metadata = {
     canonical: '/our-services/residential',
   },
 }
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://www.jindabyneelectrician.com.au' },
+  { name: 'Services', url: 'https://www.jindabyneelectrician.com.au/our-services' },
+  { name: 'Residential', url: 'https://www.jindabyneelectrician.com.au/our-services/residential' }
+]
 
 const residentialServices = [
   {
@@ -111,6 +118,7 @@ const residentialServices = [
 export default function ResidentialServicesPage() {
   return (
     <>
+      <BreadcrumbSchema items={breadcrumbs} />
       <Header />
       <main>
         <section className="hero" style={{ minHeight: '50vh' }}>

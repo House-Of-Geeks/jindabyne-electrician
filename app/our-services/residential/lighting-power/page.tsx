@@ -2,6 +2,7 @@ import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import CTASection from '../../../components/CTASection'
 import Link from 'next/link'
+import { BreadcrumbSchema } from '../../../../components/Schema'
 
 export const metadata = {
   title: 'General Electrical Services | Electrician Jindabyne | Snowy Mountains',
@@ -14,9 +15,17 @@ export const metadata = {
 
 const locations = ['Jindabyne', 'Thredbo', 'Perisher', 'Charlotte Pass', 'Berridale', 'Cooma']
 
+const breadcrumbs = [
+  { name: 'Home', url: 'https://www.jindabyneelectrician.com.au' },
+  { name: 'Services', url: 'https://www.jindabyneelectrician.com.au/our-services' },
+  { name: 'Residential', url: 'https://www.jindabyneelectrician.com.au/our-services/residential' },
+  { name: 'General Electrical', url: 'https://www.jindabyneelectrician.com.au/our-services/residential/lighting-power' }
+]
+
 export default function LightingPowerPage() {
   return (
     <>
+      <BreadcrumbSchema items={breadcrumbs} />
       <Header />
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>

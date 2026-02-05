@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import CTASection from '../../../components/CTASection'
+import { BreadcrumbSchema } from '../../../../components/Schema'
 
 export const metadata = {
   title: 'Emergency & Exit Lighting | Compliance | Jindabyne Electrician',
@@ -11,9 +12,17 @@ export const metadata = {
   },
 }
 
+const breadcrumbs = [
+  { name: 'Home', url: 'https://www.jindabyneelectrician.com.au' },
+  { name: 'Services', url: 'https://www.jindabyneelectrician.com.au/our-services' },
+  { name: 'Commercial', url: 'https://www.jindabyneelectrician.com.au/our-services/commercial' },
+  { name: 'Emergency & Exit Lighting', url: 'https://www.jindabyneelectrician.com.au/our-services/commercial/emergency-exit-lighting' }
+]
+
 export default function EmergencyExitLightingPage() {
   return (
     <>
+      <BreadcrumbSchema items={breadcrumbs} />
       <Header />
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>
