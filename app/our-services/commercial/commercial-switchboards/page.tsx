@@ -7,14 +7,17 @@ import { ServiceSchema, BreadcrumbSchema } from '../../../../components/Schema'
 export const metadata = {
   title: 'Commercial Switchboard Upgrades | Three-Phase Power | Jindabyne',
   description: 'Commercial switchboard upgrades and three-phase power installations for Jindabyne businesses. Increased capacity for modern equipment.',
+  alternates: {
+    canonical: '/our-services/commercial/commercial-switchboards',
+  },
 }
 
 export default function CommercialSwitchboardsPage() {
   const breadcrumbs = [
-    { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
-    { name: 'Services', url: 'https://jindabyneelectrician.com.au/our-services' },
-    { name: 'Commercial', url: 'https://jindabyneelectrician.com.au/our-services/commercial' },
-    { name: 'Commercial Switchboards', url: 'https://jindabyneelectrician.com.au/our-services/commercial/commercial-switchboards' }
+    { name: 'Home', url: 'https://www.jindabyneelectrician.com.au' },
+    { name: 'Services', url: 'https://www.jindabyneelectrician.com.au/our-services' },
+    { name: 'Commercial', url: 'https://www.jindabyneelectrician.com.au/our-services/commercial' },
+    { name: 'Commercial Switchboards', url: 'https://www.jindabyneelectrician.com.au/our-services/commercial/commercial-switchboards' }
   ]
 
   return (

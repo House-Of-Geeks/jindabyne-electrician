@@ -6,6 +6,9 @@ import CTASection from '../../../components/CTASection'
 export const metadata = {
   title: 'Smoke Alarm Installation | NSW Compliance | Jindabyne Electrician',
   description: 'Smoke alarm installation and upgrades for NSW compliance. Photoelectric smoke detectors for Jindabyne & Snowy Mountains properties.',
+  alternates: {
+    canonical: '/our-services/residential/smoke-alarm-installation',
+  },
 }
 
 export default function SmokeAlarmPage() {

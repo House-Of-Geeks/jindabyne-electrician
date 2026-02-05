@@ -4,13 +4,16 @@ import ContactForm from '../components/ContactForm'
 import { BreadcrumbSchema } from '../../components/Schema'
 
 const breadcrumbs = [
-  { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
-  { name: 'Contact', url: 'https://jindabyneelectrician.com.au/contact' }
+  { name: 'Home', url: 'https://www.jindabyneelectrician.com.au' },
+  { name: 'Contact', url: 'https://www.jindabyneelectrician.com.au/contact' }
 ]
 
 export const metadata = {
   title: 'Contact Us | Get Free Quote | Jindabyne Electrician',
   description: 'Contact Jindabyne Electrician for a free quote. Call now for electrical services, solar installation, battery storage, and emergency electrical.',
+  alternates: {
+    canonical: '/contact',
+  },
 }
 
 export default function ContactPage() {

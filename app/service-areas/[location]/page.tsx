@@ -467,6 +467,9 @@ export async function generateMetadata({ params }: { params: { location: string 
     title: `Electrician ${location.name} | Local Electrical Services | Solar, Battery, Starlink`,
     description: location.description,
     keywords: [`electrician ${location.name.toLowerCase()}`, `solar installation ${location.name.toLowerCase()}`, `battery storage ${location.name.toLowerCase()}`, `starlink ${location.name.toLowerCase()}`],
+    alternates: {
+      canonical: `/service-areas/${params.location}`,
+    },
   }
 }
 
@@ -503,9 +506,9 @@ export default function ServiceAreaPage({ params }: { params: { location: string
 
   // Create breadcrumbs
   const breadcrumbs = [
-    { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
-    { name: 'Service Areas', url: 'https://jindabyneelectrician.com.au/service-areas' },
-    { name: location.name, url: `https://jindabyneelectrician.com.au/service-areas/${locationSlug}` }
+    { name: 'Home', url: 'https://www.jindabyneelectrician.com.au' },
+    { name: 'Service Areas', url: 'https://www.jindabyneelectrician.com.au/service-areas' },
+    { name: location.name, url: `https://www.jindabyneelectrician.com.au/service-areas/${locationSlug}` }
   ]
 
   return (

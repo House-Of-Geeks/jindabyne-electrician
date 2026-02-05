@@ -17,6 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.jindabyneelectrician.com.au'),
   title: 'Electrician Jindabyne | Electrical, Solar & Emergency Services | Snowy Mountains NSW',
   description: 'Licensed electrician servicing Jindabyne, Thredbo & Snowy Mountains. All electrical services, solar installation, battery storage, Starlink & EV chargers. 24/7 emergency. Call now.',
   keywords: ['electrician jindabyne', 'solar installation jindabyne', 'battery storage snowy mountains', 'starlink installation thredbo', 'electrician perisher', 'emergency electrician jindabyne'],

@@ -8,6 +8,9 @@ export const metadata = {
   title: 'Solar Panel Installation | Off-Grid Solar Systems | Jindabyne & Snowy Mountains',
   description: 'Solar installation for alpine properties. Grid-tied and off-grid solar systems designed for Snowy Mountains homes and holiday properties.',
   keywords: ['solar installation jindabyne', 'off-grid solar snowy mountains', 'solar panels thredbo', 'alpine solar systems'],
+  alternates: {
+    canonical: '/our-services/residential/solar-battery',
+  },
 }
 
 const solarTypes = [
@@ -37,10 +40,10 @@ const locations = ['Jindabyne', 'Thredbo', 'Perisher', 'Charlotte Pass', 'Berrid
 
 export default function SolarBatteryPage() {
   const breadcrumbs = [
-    { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
-    { name: 'Services', url: 'https://jindabyneelectrician.com.au/our-services' },
-    { name: 'Residential', url: 'https://jindabyneelectrician.com.au/our-services/residential' },
-    { name: 'Solar Installation', url: 'https://jindabyneelectrician.com.au/our-services/residential/solar-battery' }
+    { name: 'Home', url: 'https://www.jindabyneelectrician.com.au' },
+    { name: 'Services', url: 'https://www.jindabyneelectrician.com.au/our-services' },
+    { name: 'Residential', url: 'https://www.jindabyneelectrician.com.au/our-services/residential' },
+    { name: 'Solar Installation', url: 'https://www.jindabyneelectrician.com.au/our-services/residential/solar-battery' }
   ]
 
   return (
@@ -223,7 +226,7 @@ export default function SolarBatteryPage() {
               {locations.map((location, idx) => (
                 <Link
                   key={idx}
-                  href={`/our-services/residential/solar-battery/${location.toLowerCase().replace(' ', '-')}`}
+                  href={`/service-areas/${location.toLowerCase().replace(' ', '-')}/solar-battery`}
                   style={{ textDecoration: 'none' }}
                 >
                   <div className="area-tag">

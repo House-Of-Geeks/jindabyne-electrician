@@ -6,6 +6,9 @@ import { OrganizationSchema } from '../../components/Schema'
 export const metadata = {
   title: 'About Us | Jindabyne Electrician | Licensed Electrical Services',
   description: 'Learn about our experienced team of licensed electricians serving the Snowy Mountains region. 7+ years of alpine electrical expertise.',
+  alternates: {
+    canonical: '/about',
+  },
 }
 
 export default function AboutPage() {

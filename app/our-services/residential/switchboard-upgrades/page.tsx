@@ -8,16 +8,19 @@ export const metadata = {
   title: 'Switchboard Upgrades | Electrical Panel Replacement | Jindabyne',
   description: 'Switchboard upgrades and electrical panel replacements for Jindabyne & Snowy Mountains homes. Safety switches, circuit breakers, and modern switchboards.',
   keywords: ['switchboard upgrade jindabyne', 'electrical panel upgrade', 'fuse box replacement'],
+  alternates: {
+    canonical: '/our-services/residential/switchboard-upgrades',
+  },
 }
 
 const locations = ['Jindabyne', 'Thredbo', 'Perisher', 'Charlotte Pass', 'Berridale', 'Cooma']
 
 export default function SwitchboardUpgradesPage() {
   const breadcrumbs = [
-    { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
-    { name: 'Services', url: 'https://jindabyneelectrician.com.au/our-services' },
-    { name: 'Residential', url: 'https://jindabyneelectrician.com.au/our-services/residential' },
-    { name: 'Switchboard Upgrades', url: 'https://jindabyneelectrician.com.au/our-services/residential/switchboard-upgrades' }
+    { name: 'Home', url: 'https://www.jindabyneelectrician.com.au' },
+    { name: 'Services', url: 'https://www.jindabyneelectrician.com.au/our-services' },
+    { name: 'Residential', url: 'https://www.jindabyneelectrician.com.au/our-services/residential' },
+    { name: 'Switchboard Upgrades', url: 'https://www.jindabyneelectrician.com.au/our-services/residential/switchboard-upgrades' }
   ]
 
   return (
@@ -198,7 +201,7 @@ export default function SwitchboardUpgradesPage() {
               {locations.map((location, idx) => (
                 <Link
                   key={idx}
-                  href={`/our-services/residential/switchboard-upgrades/${location.toLowerCase().replace(' ', '-')}`}
+                  href={`/service-areas/${location.toLowerCase().replace(' ', '-')}/switchboard-upgrades`}
                   style={{ textDecoration: 'none' }}
                 >
                   <div className="area-tag">

@@ -7,6 +7,9 @@ import PageMetadata from '../../components/PageMetadata'
 export const metadata = {
   title: 'Residential Electrical Services | Jindabyne Electrician | Snowy Mountains',
   description: 'Residential electrical services for Jindabyne & Snowy Mountains homes. Solar, battery storage, Starlink, EV chargers, underfloor heating & more.',
+  alternates: {
+    canonical: '/our-services/residential',
+  },
 }
 
 const residentialServices = [

@@ -8,16 +8,19 @@ export const metadata = {
   title: 'Starlink Installation | Professional Setup | Jindabyne, Thredbo & Snowy Mountains',
   description: 'Professional Starlink installation for rural Snowy Mountains properties. Reliable high-speed internet where NBN can\'t reach.',
   keywords: ['starlink installation jindabyne', 'starlink installer snowy mountains', 'starlink thredbo', 'rural internet snowy mountains'],
+  alternates: {
+    canonical: '/our-services/residential/starlink-installation',
+  },
 }
 
 const locations = ['Jindabyne', 'Thredbo', 'Perisher', 'Charlotte Pass', 'Berridale', 'Cooma']
 
 export default function StarlinkInstallationPage() {
   const breadcrumbs = [
-    { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
-    { name: 'Services', url: 'https://jindabyneelectrician.com.au/our-services' },
-    { name: 'Residential', url: 'https://jindabyneelectrician.com.au/our-services/residential' },
-    { name: 'Starlink Installation', url: 'https://jindabyneelectrician.com.au/our-services/residential/starlink-installation' }
+    { name: 'Home', url: 'https://www.jindabyneelectrician.com.au' },
+    { name: 'Services', url: 'https://www.jindabyneelectrician.com.au/our-services' },
+    { name: 'Residential', url: 'https://www.jindabyneelectrician.com.au/our-services/residential' },
+    { name: 'Starlink Installation', url: 'https://www.jindabyneelectrician.com.au/our-services/residential/starlink-installation' }
   ]
 
   return (
@@ -226,7 +229,7 @@ export default function StarlinkInstallationPage() {
               {locations.map((location, idx) => (
                 <Link
                   key={idx}
-                  href={`/our-services/residential/starlink-installation/${location.toLowerCase().replace(' ', '-')}`}
+                  href={`/service-areas/${location.toLowerCase().replace(' ', '-')}/starlink-installation`}
                   style={{ textDecoration: 'none' }}
                 >
                   <div className="area-tag">

@@ -4,13 +4,16 @@ import Footer from '../components/Footer'
 import { BreadcrumbSchema } from '../../components/Schema'
 
 const breadcrumbs = [
-  { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
-  { name: 'Privacy Policy', url: 'https://jindabyneelectrician.com.au/privacy' }
+  { name: 'Home', url: 'https://www.jindabyneelectrician.com.au' },
+  { name: 'Privacy Policy', url: 'https://www.jindabyneelectrician.com.au/privacy' }
 ]
 
 export const metadata = {
   title: 'Privacy Policy | Jindabyne Electrician',
   description: 'Privacy policy for Jindabyne Electrician. How we collect, use, and protect your personal information.',
+  alternates: {
+    canonical: '/privacy',
+  },
 }
 
 export default function PrivacyPage() {

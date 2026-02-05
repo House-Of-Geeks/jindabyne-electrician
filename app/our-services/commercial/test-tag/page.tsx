@@ -7,14 +7,17 @@ import { ServiceSchema, BreadcrumbSchema } from '../../../../components/Schema'
 export const metadata = {
   title: 'Test & Tag Services | Electrical Safety Testing | Jindabyne',
   description: 'Test and tag services for Jindabyne businesses. Electrical appliance safety testing for workplace compliance and safety.',
+  alternates: {
+    canonical: '/our-services/commercial/test-tag',
+  },
 }
 
 export default function TestTagPage() {
   const breadcrumbs = [
-    { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
-    { name: 'Services', url: 'https://jindabyneelectrician.com.au/our-services' },
-    { name: 'Commercial', url: 'https://jindabyneelectrician.com.au/our-services/commercial' },
-    { name: 'Test & Tag', url: 'https://jindabyneelectrician.com.au/our-services/commercial/test-tag' }
+    { name: 'Home', url: 'https://www.jindabyneelectrician.com.au' },
+    { name: 'Services', url: 'https://www.jindabyneelectrician.com.au/our-services' },
+    { name: 'Commercial', url: 'https://www.jindabyneelectrician.com.au/our-services/commercial' },
+    { name: 'Test & Tag', url: 'https://www.jindabyneelectrician.com.au/our-services/commercial/test-tag' }
   ]
 
   return (

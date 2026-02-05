@@ -6,13 +6,16 @@ import { Metadata } from 'next'
 import { BreadcrumbSchema } from '../../components/Schema'
 
 const breadcrumbs = [
-  { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
-  { name: 'Service Areas', url: 'https://jindabyneelectrician.com.au/service-areas' }
+  { name: 'Home', url: 'https://www.jindabyneelectrician.com.au' },
+  { name: 'Service Areas', url: 'https://www.jindabyneelectrician.com.au/service-areas' }
 ]
 
 export const metadata: Metadata = {
   title: 'Service Areas | Electrician Serving Jindabyne, Thredbo & Snowy Mountains',
   description: 'Licensed electricians serving Jindabyne, Thredbo, Perisher, Cooma, Berridale and all Snowy Mountains locations. Solar, battery storage, Starlink & emergency electrical.',
+  alternates: {
+    canonical: '/service-areas',
+  },
 }
 
 const locations = [

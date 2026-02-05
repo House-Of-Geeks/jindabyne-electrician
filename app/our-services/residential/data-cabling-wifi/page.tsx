@@ -6,6 +6,9 @@ import CTASection from '../../../components/CTASection'
 export const metadata = {
   title: 'Data Cabling & WiFi Installation | Jindabyne Electrician',
   description: 'Professional data cabling, network points, and WiFi solutions for Snowy Mountains properties. Reliable internet connectivity for holiday homes and businesses.',
+  alternates: {
+    canonical: '/our-services/residential/data-cabling-wifi',
+  },
 }
 
 export default function DataCablingPage() {

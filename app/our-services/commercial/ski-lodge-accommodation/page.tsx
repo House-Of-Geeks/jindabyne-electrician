@@ -7,14 +7,17 @@ import { ServiceSchema, BreadcrumbSchema } from '../../../../components/Schema'
 export const metadata = {
   title: 'Ski Lodge & Accommodation Electrical | Jindabyne Electrician',
   description: 'Commercial electrical services for ski lodges, hotels, and accommodation providers in Jindabyne & Snowy Mountains. Compliance, maintenance, and installations.',
+  alternates: {
+    canonical: '/our-services/commercial/ski-lodge-accommodation',
+  },
 }
 
 export default function SkiLodgePage() {
   const breadcrumbs = [
-    { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
-    { name: 'Services', url: 'https://jindabyneelectrician.com.au/our-services' },
-    { name: 'Commercial', url: 'https://jindabyneelectrician.com.au/our-services/commercial' },
-    { name: 'Ski Lodge & Accommodation', url: 'https://jindabyneelectrician.com.au/our-services/commercial/ski-lodge-accommodation' }
+    { name: 'Home', url: 'https://www.jindabyneelectrician.com.au' },
+    { name: 'Services', url: 'https://www.jindabyneelectrician.com.au/our-services' },
+    { name: 'Commercial', url: 'https://www.jindabyneelectrician.com.au/our-services/commercial' },
+    { name: 'Ski Lodge & Accommodation', url: 'https://www.jindabyneelectrician.com.au/our-services/commercial/ski-lodge-accommodation' }
   ]
 
   return (

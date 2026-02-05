@@ -6,6 +6,9 @@ import CTASection from '../../../components/CTASection'
 export const metadata = {
   title: 'Property Management & Real Estate Electrical Services | Jindabyne',
   description: 'Electrical services for property managers, real estate agents, and landlords in the Snowy Mountains. Compliance certificates, inspections, and fast turnaround maintenance.',
+  alternates: {
+    canonical: '/our-services/residential/property-management-real-estate',
+  },
 }
 
 export default function PropertyManagementPage() {

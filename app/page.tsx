@@ -7,6 +7,12 @@ import CTASection from './components/CTASection'
 import Footer from './components/Footer'
 import { LocalBusinessSchema, ReviewSchema } from '../components/Schema'
 
+export const metadata = {
+  alternates: {
+    canonical: '/',
+  },
+}
+
 export default function Home() {
   return (
     <>

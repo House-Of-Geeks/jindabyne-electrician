@@ -7,14 +7,17 @@ import { ServiceSchema, BreadcrumbSchema } from '../../../../components/Schema'
 export const metadata = {
   title: 'Commercial Solar Systems | Business Solar | Jindabyne Electrician',
   description: 'Commercial solar installations for Jindabyne businesses. Reduce operating costs with solar power for retail, hospitality, and accommodation.',
+  alternates: {
+    canonical: '/our-services/commercial/commercial-solar',
+  },
 }
 
 export default function CommercialSolarPage() {
   const breadcrumbs = [
-    { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
-    { name: 'Services', url: 'https://jindabyneelectrician.com.au/our-services' },
-    { name: 'Commercial', url: 'https://jindabyneelectrician.com.au/our-services/commercial' },
-    { name: 'Commercial Solar', url: 'https://jindabyneelectrician.com.au/our-services/commercial/commercial-solar' }
+    { name: 'Home', url: 'https://www.jindabyneelectrician.com.au' },
+    { name: 'Services', url: 'https://www.jindabyneelectrician.com.au/our-services' },
+    { name: 'Commercial', url: 'https://www.jindabyneelectrician.com.au/our-services/commercial' },
+    { name: 'Commercial Solar', url: 'https://www.jindabyneelectrician.com.au/our-services/commercial/commercial-solar' }
   ]
 
   return (

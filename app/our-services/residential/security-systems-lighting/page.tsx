@@ -6,6 +6,9 @@ import CTASection from '../../../components/CTASection'
 export const metadata = {
   title: 'Security Cameras & Lighting Installation | Jindabyne Electrician',
   description: 'Security camera and lighting installation for Snowy Mountains properties. Remote monitoring, motion-activated lighting, and visual deterrents for holiday homes.',
+  alternates: {
+    canonical: '/our-services/residential/security-systems-lighting',
+  },
 }
 
 export default function SecuritySystemsPage() {

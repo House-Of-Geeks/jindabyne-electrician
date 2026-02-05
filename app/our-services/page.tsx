@@ -5,13 +5,16 @@ import CTASection from '../components/CTASection'
 import { BreadcrumbSchema } from '../../components/Schema'
 
 const breadcrumbs = [
-  { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
-  { name: 'Our Services', url: 'https://jindabyneelectrician.com.au/our-services' }
+  { name: 'Home', url: 'https://www.jindabyneelectrician.com.au' },
+  { name: 'Our Services', url: 'https://www.jindabyneelectrician.com.au/our-services' }
 ]
 
 export const metadata = {
   title: 'Our Services | Residential & Commercial Electrical | Jindabyne Electrician',
   description: 'Complete electrical services for Snowy Mountains properties. Residential and commercial solutions including solar, battery storage, and emergency electrical.',
+  alternates: {
+    canonical: '/our-services',
+  },
 }
 
 export default function ServicesPage() {

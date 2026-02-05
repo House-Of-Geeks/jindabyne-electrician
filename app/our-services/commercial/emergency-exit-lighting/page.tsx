@@ -6,6 +6,9 @@ import CTASection from '../../../components/CTASection'
 export const metadata = {
   title: 'Emergency & Exit Lighting | Compliance | Jindabyne Electrician',
   description: 'Emergency and exit lighting installation for commercial buildings in Jindabyne. NSW Building Code compliant emergency lighting systems.',
+  alternates: {
+    canonical: '/our-services/commercial/emergency-exit-lighting',
+  },
 }
 
 export default function EmergencyExitLightingPage() {

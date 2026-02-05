@@ -6,6 +6,9 @@ import CTASection from '../../../components/CTASection'
 export const metadata = {
   title: 'Split System Heating & Cooling Installation | Jindabyne Electrician',
   description: 'Licensed split system air conditioner installation and servicing in the Snowy Mountains. Stay warm in winter and cool in summer with efficient heating and cooling.',
+  alternates: {
+    canonical: '/our-services/residential/split-system-heating-cooling',
+  },
 }
 
 export default function SplitSystemPage() {

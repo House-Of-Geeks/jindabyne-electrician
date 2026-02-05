@@ -7,14 +7,17 @@ import { ServiceSchema, BreadcrumbSchema } from '../../../../components/Schema'
 export const metadata = {
   title: 'Underfloor Heating Installation | Electric Floor Heating | Jindabyne',
   description: 'Electric underfloor heating installation for alpine homes. Premium comfort for Jindabyne winters with energy-efficient heated floors.',
+  alternates: {
+    canonical: '/our-services/residential/underfloor-heating',
+  },
 }
 
 export default function UnderfloorHeatingPage() {
   const breadcrumbs = [
-    { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
-    { name: 'Services', url: 'https://jindabyneelectrician.com.au/our-services' },
-    { name: 'Residential', url: 'https://jindabyneelectrician.com.au/our-services/residential' },
-    { name: 'Underfloor Heating', url: 'https://jindabyneelectrician.com.au/our-services/residential/underfloor-heating' }
+    { name: 'Home', url: 'https://www.jindabyneelectrician.com.au' },
+    { name: 'Services', url: 'https://www.jindabyneelectrician.com.au/our-services' },
+    { name: 'Residential', url: 'https://www.jindabyneelectrician.com.au/our-services/residential' },
+    { name: 'Underfloor Heating', url: 'https://www.jindabyneelectrician.com.au/our-services/residential/underfloor-heating' }
   ]
 
   return (

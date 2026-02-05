@@ -8,6 +8,9 @@ export const metadata = {
   title: 'Battery Storage Installation | Tesla Powerwall | Jindabyne & Snowy Mountains',
   description: 'Home battery storage systems for Snowy Mountains properties. Tesla Powerwall, Sonnen, BYD. Protect against power outages and reduce electricity costs.',
   keywords: ['battery storage jindabyne', 'tesla powerwall installer', 'home battery snowy mountains', 'backup power jindabyne', 'blackout protection'],
+  alternates: {
+    canonical: '/our-services/residential/battery-storage',
+  },
 }
 
 const batteryBrands = [
@@ -35,10 +38,10 @@ const locations = ['Jindabyne', 'Thredbo', 'Perisher', 'Charlotte Pass', 'Berrid
 
 export default function BatteryStoragePage() {
   const breadcrumbs = [
-    { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
-    { name: 'Services', url: 'https://jindabyneelectrician.com.au/our-services' },
-    { name: 'Residential', url: 'https://jindabyneelectrician.com.au/our-services/residential' },
-    { name: 'Battery Storage', url: 'https://jindabyneelectrician.com.au/our-services/residential/battery-storage' }
+    { name: 'Home', url: 'https://www.jindabyneelectrician.com.au' },
+    { name: 'Services', url: 'https://www.jindabyneelectrician.com.au/our-services' },
+    { name: 'Residential', url: 'https://www.jindabyneelectrician.com.au/our-services/residential' },
+    { name: 'Battery Storage', url: 'https://www.jindabyneelectrician.com.au/our-services/residential/battery-storage' }
   ]
 
   return (
@@ -192,7 +195,7 @@ export default function BatteryStoragePage() {
               {locations.map((location, idx) => (
                 <Link
                   key={idx}
-                  href={`/our-services/residential/battery-storage/${location.toLowerCase().replace(' ', '-')}`}
+                  href={`/service-areas/${location.toLowerCase().replace(' ', '-')}/battery-storage`}
                   style={{ textDecoration: 'none' }}
                 >
                   <div className="area-tag">

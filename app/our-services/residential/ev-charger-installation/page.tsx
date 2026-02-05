@@ -7,14 +7,17 @@ import { ServiceSchema, BreadcrumbSchema } from '../../../../components/Schema'
 export const metadata = {
   title: 'EV Charger Installation | Tesla Charger | Jindabyne Electrician',
   description: 'Electric vehicle charger installation for Jindabyne & Snowy Mountains homes. Tesla Wall Connector and universal EV chargers.',
+  alternates: {
+    canonical: '/our-services/residential/ev-charger-installation',
+  },
 }
 
 export default function EVChargerPage() {
   const breadcrumbs = [
-    { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
-    { name: 'Services', url: 'https://jindabyneelectrician.com.au/our-services' },
-    { name: 'Residential', url: 'https://jindabyneelectrician.com.au/our-services/residential' },
-    { name: 'EV Charger Installation', url: 'https://jindabyneelectrician.com.au/our-services/residential/ev-charger-installation' }
+    { name: 'Home', url: 'https://www.jindabyneelectrician.com.au' },
+    { name: 'Services', url: 'https://www.jindabyneelectrician.com.au/our-services' },
+    { name: 'Residential', url: 'https://www.jindabyneelectrician.com.au/our-services/residential' },
+    { name: 'EV Charger Installation', url: 'https://www.jindabyneelectrician.com.au/our-services/residential/ev-charger-installation' }
   ]
 
   return (

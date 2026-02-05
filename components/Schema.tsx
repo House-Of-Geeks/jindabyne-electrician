@@ -5,7 +5,7 @@ export function LocalBusinessSchema() {
     "@type": "Electrician",
     "name": "Jindabyne Electrician",
     "description": "Licensed electricians serving Jindabyne, Thredbo, Perisher, and the Snowy Mountains. Specialists in solar installation, battery storage, Starlink, and alpine electrical systems.",
-    "url": "https://jindabyneelectrician.com.au",
+    "url": "https://www.jindabyneelectrician.com.au",
     "telephone": "+61455221921",
     "email": "info@jindabyneelectrician.com.au",
     "address": {
@@ -330,7 +330,7 @@ export function LocationBusinessSchema({
     "@type": "Electrician",
     "name": `Jindabyne Electrician - ${locationName}`,
     "description": description,
-    "url": `https://jindabyneelectrician.com.au/service-areas/${locationName.toLowerCase().replace(/\s+/g, '-')}`,
+    "url": `https://www.jindabyneelectrician.com.au/service-areas/${locationName.toLowerCase().replace(/\s+/g, '-')}`,
     "telephone": "+61455221921",
     "email": "info@jindabyneelectrician.com.au",
     "address": {
@@ -360,7 +360,7 @@ export function OrganizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Jindabyne Electrician",
-    "url": "https://jindabyneelectrician.com.au",
+    "url": "https://www.jindabyneelectrician.com.au",
     "description": "Licensed electricians serving the Snowy Mountains region. Specialists in solar installation, battery storage, and alpine electrical systems.",
     "email": "info@jindabyneelectrician.com.au",
     "address": {
@@ -377,7 +377,7 @@ export function OrganizationSchema() {
       "availableLanguage": "English"
     },
     "sameAs": [
-      "https://jindabyneelectrician.com.au"
+      "https://www.jindabyneelectrician.com.au"
     ]
   }
 

@@ -7,6 +7,9 @@ import PageMetadata from '../../components/PageMetadata'
 export const metadata = {
   title: 'Commercial Electrical Services | Ski Lodges, Retail & Hospitality | Jindabyne',
   description: 'Commercial electrical services for Snowy Mountains businesses. Ski lodges, restaurants, retail, hotels—expert service for alpine commercial properties.',
+  alternates: {
+    canonical: '/our-services/commercial',
+  },
 }
 
 const commercialServices = [

@@ -21,9 +21,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     .slice(0, 2)
 
   const breadcrumbs = [
-    { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
-    { name: 'Blog', url: 'https://jindabyneelectrician.com.au/blog' },
-    { name: post.title, url: `https://jindabyneelectrician.com.au/blog/${post.slug}` }
+    { name: 'Home', url: 'https://www.jindabyneelectrician.com.au' },
+    { name: 'Blog', url: 'https://www.jindabyneelectrician.com.au/blog' },
+    { name: post.title, url: `https://www.jindabyneelectrician.com.au/blog/${post.slug}` }
   ]
 
   return (

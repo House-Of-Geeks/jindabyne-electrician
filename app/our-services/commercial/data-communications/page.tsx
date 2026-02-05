@@ -6,6 +6,9 @@ import CTASection from '../../../components/CTASection'
 export const metadata = {
   title: 'Data & Communications Cabling | Network Installation | Jindabyne',
   description: 'Commercial data and communications cabling for Jindabyne businesses. Cat6 networking, WiFi infrastructure, and phone systems.',
+  alternates: {
+    canonical: '/our-services/commercial/data-communications',
+  },
 }
 
 export default function DataCommunicationsPage() {

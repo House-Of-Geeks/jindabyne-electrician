@@ -7,6 +7,9 @@ export const metadata = {
   title: 'General Electrical Services | Electrician Jindabyne | Snowy Mountains',
   description: 'General electrical services for Jindabyne & Snowy Mountains homes. LED lighting, power points, electrical repairs, and maintenance.',
   keywords: ['electrician jindabyne', 'electrical services jindabyne', 'electrical repairs snowy mountains'],
+  alternates: {
+    canonical: '/our-services/residential/lighting-power',
+  },
 }
 
 const locations = ['Jindabyne', 'Thredbo', 'Perisher', 'Charlotte Pass', 'Berridale', 'Cooma']
@@ -155,7 +158,7 @@ export default function LightingPowerPage() {
               {locations.map((location, idx) => (
                 <Link
                   key={idx}
-                  href={`/our-services/residential/lighting-power/${location.toLowerCase().replace(' ', '-')}`}
+                  href={`/service-areas/${location.toLowerCase().replace(' ', '-')}/lighting-power`}
                   style={{ textDecoration: 'none' }}
                 >
                   <div className="area-tag">

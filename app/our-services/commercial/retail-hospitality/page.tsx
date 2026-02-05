@@ -7,14 +7,17 @@ import { ServiceSchema, BreadcrumbSchema } from '../../../../components/Schema'
 export const metadata = {
   title: 'Retail & Hospitality Electrical | Cafes, Shops | Jindabyne',
   description: 'Commercial electrical for retail shops, cafes, restaurants & hospitality in Jindabyne. Fit-outs, lighting, and commercial kitchen installations.',
+  alternates: {
+    canonical: '/our-services/commercial/retail-hospitality',
+  },
 }
 
 export default function RetailHospitalityPage() {
   const breadcrumbs = [
-    { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
-    { name: 'Services', url: 'https://jindabyneelectrician.com.au/our-services' },
-    { name: 'Commercial', url: 'https://jindabyneelectrician.com.au/our-services/commercial' },
-    { name: 'Retail & Hospitality', url: 'https://jindabyneelectrician.com.au/our-services/commercial/retail-hospitality' }
+    { name: 'Home', url: 'https://www.jindabyneelectrician.com.au' },
+    { name: 'Services', url: 'https://www.jindabyneelectrician.com.au/our-services' },
+    { name: 'Commercial', url: 'https://www.jindabyneelectrician.com.au/our-services/commercial' },
+    { name: 'Retail & Hospitality', url: 'https://www.jindabyneelectrician.com.au/our-services/commercial/retail-hospitality' }
   ]
 
   return (

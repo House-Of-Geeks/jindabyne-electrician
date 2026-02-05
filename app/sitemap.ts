@@ -3,7 +3,7 @@ import { blogPosts } from '../data/blog'
 import locationsData from '../data/locations.json'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://jindabyneelectrician.com.au'
+  const baseUrl = 'https://www.jindabyneelectrician.com.au'
 
   // Get location keys from the data
   const locations = Object.keys(locationsData).filter(key => key !== '_metadata')

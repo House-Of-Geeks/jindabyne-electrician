@@ -6,6 +6,9 @@ import CTASection from '../../../components/CTASection'
 export const metadata = {
   title: '24/7 Emergency Electrician | Jindabyne & Snowy Mountains',
   description: 'Emergency electrical services available 24/7 for Jindabyne, Thredbo & Snowy Mountains. Fast response for power outages, electrical faults, and urgent repairs.',
+  alternates: {
+    canonical: '/our-services/residential/emergency-electrical',
+  },
 }
 
 export default function EmergencyElectricalPage() {

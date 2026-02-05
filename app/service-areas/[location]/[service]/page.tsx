@@ -295,6 +295,9 @@ export async function generateMetadata({ params }: { params: { location: string;
       `electrician ${location.name.toLowerCase()}`,
       `${service.shortName.toLowerCase()} snowy mountains`
     ],
+    alternates: {
+      canonical: `/service-areas/${params.location}/${params.service}`,
+    },
   }
 }
 

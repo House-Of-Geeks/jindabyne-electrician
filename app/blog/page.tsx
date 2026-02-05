@@ -6,13 +6,16 @@ import { blogPosts } from '../../data/blog'
 import { BreadcrumbSchema } from '../../components/Schema'
 
 const breadcrumbs = [
-  { name: 'Home', url: 'https://jindabyneelectrician.com.au' },
-  { name: 'Blog', url: 'https://jindabyneelectrician.com.au/blog' }
+  { name: 'Home', url: 'https://www.jindabyneelectrician.com.au' },
+  { name: 'Blog', url: 'https://www.jindabyneelectrician.com.au/blog' }
 ]
 
 export const metadata: Metadata = {
   title: 'Electrical Tips & Guides | Jindabyne Electrician Blog',
   description: 'Expert electrical advice for Snowy Mountains homeowners and businesses. Solar, battery storage, Starlink, underfloor heating, and more.',
+  alternates: {
+    canonical: '/blog',
+  },
 }
 
 export default function BlogPage() {
