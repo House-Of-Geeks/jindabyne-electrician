@@ -600,8 +600,8 @@
     }
   },
   "_metadata": {
-    "last_updated": "2026-01-23",
-    "next_update_due": "2026-02-23",
+    "last_updated": "2026-02-23",
+    "next_update_due": "2026-03-23",
     "data_sources": {
       "bom": "http://www.bom.gov.au/climate/data/",
       "abs": "https://www.abs.gov.au/census",
