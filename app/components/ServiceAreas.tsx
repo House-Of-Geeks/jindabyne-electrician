@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useEffect, useRef } from 'react'
 
 const areas = [
@@ -52,7 +53,14 @@ export default function ServiceAreas() {
 
         <div className="areas-grid">
           {areas.map((area, index) => (
-            <div key={index} className="area-tag">{area}</div>
+            <Link
+              key={index}
+              href={`/service-areas/${area.toLowerCase().replace(/\s+/g, '-')}`}
+              className="area-tag"
+              style={{ textDecoration: 'none' }}
+            >
+              {area}
+            </Link>
           ))}
         </div>
       </div>

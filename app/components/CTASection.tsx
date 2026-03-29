@@ -36,6 +36,9 @@ export default function CTASection() {
               <Link href="/contact" className="cta-primary">
                 Request Free Quote
               </Link>
+              <a href="tel:0455221921" className="cta-secondary">
+                📞 Call Now
+              </a>
             </div>
           </div>
         </div>

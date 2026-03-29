@@ -10,7 +10,7 @@ const breadcrumbs = [
 
 export const metadata = {
   title: 'Contact Us | Get Free Quote | Jindabyne Electrician',
-  description: 'Contact Jindabyne Electrician for a free quote. Call now for electrical services, solar installation, battery storage, and emergency electrical.',
+  description: 'Call 0455 221 921 or request a free quote online. Licensed Jindabyne electrician — solar, battery, Starlink, switchboards & 24/7 emergency. Fast local response.',
   alternates: {
     canonical: '/contact',
   },

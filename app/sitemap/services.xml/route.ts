@@ -28,7 +28,7 @@ const commercialServices = [
 ]
 
 export async function GET() {
-  const lastmod = new Date().toISOString()
+  const lastmod = '2026-03-30T00:00:00.000Z'
 
   const residentialUrls = residentialServices.map(service => ({
     url: `${baseUrl}/our-services/residential/${service}`,

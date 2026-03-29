@@ -203,7 +203,7 @@ export default function SwitchboardUpgradesPage() {
               {locations.map((location, idx) => (
                 <Link
                   key={idx}
-                  href={`/service-areas/${location.toLowerCase().replace(' ', '-')}/switchboard-upgrades`}
+                  href={`/service-areas/${location.toLowerCase().replace(/\s+/g, '-')}/switchboard-upgrades`}
                   style={{ textDecoration: 'none' }}
                 >
                   <div className="area-tag">

@@ -53,9 +53,9 @@ export default function Hero() {
           <Link href="/contact" className="cta-primary">
             Get Free Quote
           </Link>
-          <Link href="#services" className="cta-secondary">
-            View Services →
-          </Link>
+          <a href="tel:0455221921" className="cta-secondary">
+            📞 0455 221 921
+          </a>
         </div>
         <div className="hero-trust">
           <div className="trust-item">

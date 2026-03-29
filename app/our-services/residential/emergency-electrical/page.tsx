@@ -36,8 +36,11 @@ export default function EmergencyElectricalPage() {
               power outages, electrical faults, safety hazards, and urgent repairs.
             </p>
             <div className="hero-ctas">
-              <Link href="/contact" className="cta-primary">
-                Get Emergency Service
+              <a href="tel:0455221921" className="cta-primary">
+                📞 Call Now — 0455 221 921
+              </a>
+              <Link href="/contact" className="cta-secondary">
+                Request Callback
               </Link>
             </div>
           </div>

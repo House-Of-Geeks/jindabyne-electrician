@@ -19,8 +19,21 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.jindabyneelectrician.com.au'),
   title: 'Electrician Jindabyne | Electrical, Solar & Emergency Services | Snowy Mountains NSW',
-  description: 'Licensed electrician servicing Jindabyne, Thredbo & Snowy Mountains. All electrical services, solar installation, battery storage, Starlink & EV chargers. 24/7 emergency. Call now.',
+  description: 'Jindabyne\'s trusted electrician — solar, battery storage, Starlink & 24/7 emergency. Licensed, insured, 7+ years local. Call 0455 221 921 for a free quote.',
   keywords: ['electrician jindabyne', 'solar installation jindabyne', 'battery storage snowy mountains', 'starlink installation thredbo', 'electrician perisher', 'emergency electrician jindabyne'],
+  openGraph: {
+    type: 'website',
+    siteName: 'Jindabyne Electrician',
+    title: 'Electrician Jindabyne | Electrical, Solar & Emergency Services',
+    description: 'Jindabyne\'s trusted electrician — solar, battery storage, Starlink & 24/7 emergency. Licensed, insured, 7+ years local. Call 0455 221 921.',
+    url: 'https://www.jindabyneelectrician.com.au',
+    locale: 'en_AU',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Electrician Jindabyne | Electrical, Solar & Emergency Services',
+    description: 'Jindabyne\'s trusted electrician — solar, battery storage, Starlink & 24/7 emergency. Licensed, insured, 7+ years local. Call 0455 221 921.',
+  },
 }
 
 export default function RootLayout({

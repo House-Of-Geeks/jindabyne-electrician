@@ -169,7 +169,7 @@ export default function LightingPowerPage() {
               {locations.map((location, idx) => (
                 <Link
                   key={idx}
-                  href={`/service-areas/${location.toLowerCase().replace(' ', '-')}/lighting-power`}
+                  href={`/service-areas/${location.toLowerCase().replace(/\s+/g, '-')}/lighting-power`}
                   style={{ textDecoration: 'none' }}
                 >
                   <div className="area-tag">

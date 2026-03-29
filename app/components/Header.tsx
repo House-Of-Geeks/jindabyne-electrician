@@ -112,6 +112,9 @@ export default function Header() {
           <Link href="/contact" className="nav-link">
             Contact
           </Link>
+          <a href="tel:0455221921" className="nav-phone">
+            0455 221 921
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -178,6 +181,9 @@ export default function Header() {
           <Link href="/contact" className="mobile-menu-link" onClick={() => setMobileMenuOpen(false)}>
             Contact
           </Link>
+          <a href="tel:0455221921" className="mobile-menu-link" style={{ color: 'var(--electric-blue)', fontWeight: '700' }}>
+            📞 0455 221 921
+          </a>
         </div>
       )}
     </header>

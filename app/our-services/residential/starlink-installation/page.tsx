@@ -231,7 +231,7 @@ export default function StarlinkInstallationPage() {
               {locations.map((location, idx) => (
                 <Link
                   key={idx}
-                  href={`/service-areas/${location.toLowerCase().replace(' ', '-')}/starlink-installation`}
+                  href={`/service-areas/${location.toLowerCase().replace(/\s+/g, '-')}/starlink-installation`}
                   style={{ textDecoration: 'none' }}
                 >
                   <div className="area-tag">

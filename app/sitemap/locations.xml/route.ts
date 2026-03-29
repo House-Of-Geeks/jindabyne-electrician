@@ -23,7 +23,7 @@ const locationServices = [
 ]
 
 export async function GET() {
-  const lastmod = new Date().toISOString()
+  const lastmod = '2026-03-30T00:00:00.000Z'
   const locations = Object.keys(locationsData).filter(key => key !== '_metadata')
 
   // Location landing pages

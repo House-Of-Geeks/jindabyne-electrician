@@ -377,7 +377,8 @@ export function OrganizationSchema() {
       "availableLanguage": "English"
     },
     "sameAs": [
-      "https://www.jindabyneelectrician.com.au"
+      "https://www.facebook.com/jindabyneelectrician",
+      "https://www.instagram.com/jindabyneelectrician"
     ]
   }
 

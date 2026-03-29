@@ -61,6 +61,12 @@ export default function Footer() {
             <h4 className="footer-heading">Contact Us</h4>
             <ul className="footer-contact">
               <li>
+                <strong>Phone:</strong><br />
+                <a href="tel:0455221921" style={{ color: 'var(--electric-blue)', textDecoration: 'none', fontSize: '1.125rem', fontWeight: '700' }}>
+                  0455 221 921
+                </a>
+              </li>
+              <li>
                 <strong>Email:</strong><br />
                 <a href="mailto:info@jindabyneelectrician.com.au" style={{ color: 'var(--electric-blue)', textDecoration: 'none' }}>
                   info@jindabyneelectrician.com.au

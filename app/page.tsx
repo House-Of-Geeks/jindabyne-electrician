@@ -5,7 +5,7 @@ import Reviews from './components/Reviews'
 import ServiceAreas from './components/ServiceAreas'
 import CTASection from './components/CTASection'
 import Footer from './components/Footer'
-import { LocalBusinessSchema, ReviewSchema } from '../components/Schema'
+import { LocalBusinessSchema } from '../components/Schema'
 
 export const metadata = {
   alternates: {
@@ -17,7 +17,6 @@ export default function Home() {
   return (
     <>
       <LocalBusinessSchema />
-      <ReviewSchema rating={4.9} reviewCount={47} />
       <Header />
       <main>
         <Hero />

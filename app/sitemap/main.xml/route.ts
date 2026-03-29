@@ -14,7 +14,7 @@ const staticPages = [
 ]
 
 export async function GET() {
-  const lastmod = new Date().toISOString()
+  const lastmod = '2026-03-30T00:00:00.000Z'
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

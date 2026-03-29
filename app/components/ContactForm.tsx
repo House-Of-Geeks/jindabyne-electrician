@@ -17,16 +17,22 @@ export default function ContactForm() {
     e.preventDefault()
     setStatus('submitting')
 
-    // TODO: Replace with actual form submission logic (SendGrid API route)
-    // For now, just simulate submission
-    setTimeout(() => {
-      console.log('Form data:', formData)
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+
+      if (!res.ok) throw new Error('Send failed')
+
       setStatus('success')
       setFormData({ name: '', email: '', phone: '', location: '', service: '', message: '' })
-
-      // Reset status after 5 seconds
       setTimeout(() => setStatus('idle'), 5000)
-    }, 1000)
+    } catch {
+      setStatus('error')
+      setTimeout(() => setStatus('idle'), 5000)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {

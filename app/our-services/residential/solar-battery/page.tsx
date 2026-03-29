@@ -228,7 +228,7 @@ export default function SolarBatteryPage() {
               {locations.map((location, idx) => (
                 <Link
                   key={idx}
-                  href={`/service-areas/${location.toLowerCase().replace(' ', '-')}/solar-battery`}
+                  href={`/service-areas/${location.toLowerCase().replace(/\s+/g, '-')}/solar-battery`}
                   style={{ textDecoration: 'none' }}
                 >
                   <div className="area-tag">

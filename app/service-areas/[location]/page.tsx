@@ -4,7 +4,7 @@ import Footer from '../../components/Footer'
 import CTASection from '../../components/CTASection'
 import PageMetadata from '../../components/PageMetadata'
 import Breadcrumb from '../../components/Breadcrumb'
-import { LocationBusinessSchema, BreadcrumbSchema } from '../../../components/Schema'
+import { LocationBusinessSchema, BreadcrumbSchema, FAQSchema } from '../../../components/Schema'
 import { Metadata } from 'next'
 import locationsData from '../../../data/locations.json'
 
@@ -466,7 +466,7 @@ export async function generateMetadata({ params }: { params: { location: string 
 
   return {
     title: `Electrician ${location.name} | Local Electrical Services | Solar, Battery, Starlink`,
-    description: location.description,
+    description: `Licensed electrician serving ${location.name}. Solar, battery storage, Starlink & 24/7 emergency. 7+ years local experience. Call 0455 221 921 for a free quote.`,
     keywords: [`electrician ${location.name.toLowerCase()}`, `solar installation ${location.name.toLowerCase()}`, `battery storage ${location.name.toLowerCase()}`, `starlink ${location.name.toLowerCase()}`],
     alternates: {
       canonical: `/service-areas/${params.location}`,
@@ -512,6 +512,25 @@ export default function ServiceAreaPage({ params }: { params: { location: string
     { name: location.name, url: `https://www.jindabyneelectrician.com.au/service-areas/${locationSlug}` }
   ]
 
+  const faqs = [
+    {
+      question: `Do you have an electrician near ${location.name}?`,
+      answer: `Yes — we're local electricians based in Jindabyne and service ${location.name} and surrounding areas. Call 0455 221 921 for same-day or next-day availability.`
+    },
+    {
+      question: `How much does an electrician cost in ${location.name}?`,
+      answer: `Pricing depends on the job. We offer free quotes for all electrical work in ${location.name}. Call 0455 221 921 or fill in our online form for a no-obligation quote.`
+    },
+    {
+      question: `Do you offer 24/7 emergency electrical services in ${location.name}?`,
+      answer: `Yes — we provide 24/7 emergency electrical services across ${location.name} and the Snowy Mountains region. For emergencies, call 0455 221 921 immediately.`
+    },
+    {
+      question: `Can you install solar panels in ${location.name}?`,
+      answer: `Yes — we specialise in solar panel installation across the Snowy Mountains including ${location.name}. We also install battery storage systems for energy independence. Contact us for a free solar quote.`
+    },
+  ]
+
   return (
     <>
       <LocationBusinessSchema
@@ -520,6 +539,7 @@ export default function ServiceAreaPage({ params }: { params: { location: string
         postalCode={locationInfo && typeof locationInfo === 'object' && 'postcode' in locationInfo ? locationInfo.postcode : '2627'}
       />
       <BreadcrumbSchema items={breadcrumbs} />
+      <FAQSchema faqs={faqs} />
       <Header />
       <main>
         <section className="hero" style={{ minHeight: '60vh' }}>
@@ -662,7 +682,7 @@ export default function ServiceAreaPage({ params }: { params: { location: string
               {location.nearbyAreas.map((area) => (
                 <Link
                   key={area}
-                  href={`/service-areas/${area.toLowerCase().replace(' ', '-')}`}
+                  href={`/service-areas/${area.toLowerCase().replace(/\s+/g, '-')}`}
                   style={{ textDecoration: 'none' }}
                 >
                   <div className="area-tag">{area}</div>

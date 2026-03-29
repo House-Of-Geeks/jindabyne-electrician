@@ -197,7 +197,7 @@ export default function BatteryStoragePage() {
               {locations.map((location, idx) => (
                 <Link
                   key={idx}
-                  href={`/service-areas/${location.toLowerCase().replace(' ', '-')}/battery-storage`}
+                  href={`/service-areas/${location.toLowerCase().replace(/\s+/g, '-')}/battery-storage`}
                   style={{ textDecoration: 'none' }}
                 >
                   <div className="area-tag">

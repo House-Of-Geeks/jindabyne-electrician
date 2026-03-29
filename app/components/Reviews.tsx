@@ -2,24 +2,6 @@
 
 import { useEffect, useRef } from 'react'
 
-const reviews = [
-  {
-    stars: 5,
-    text: 'Excellent service installing our Starlink at our Thredbo property. Professional, on-time, and worked perfectly in challenging alpine conditions.',
-    author: 'Sarah M., Thredbo'
-  },
-  {
-    stars: 5,
-    text: 'Had solar and battery storage installed on our holiday home. The team was knowledgeable about off-grid systems and delivered exactly what we needed.',
-    author: 'Michael K., Jindabyne'
-  },
-  {
-    stars: 5,
-    text: 'Fast emergency response when we had a power issue during ski season. Reliable and trustworthy electrician for our lodge.',
-    author: 'Emma D., Perisher'
-  }
-]
-
 export default function Reviews() {
   const sectionRef = useRef<HTMLElement>(null)
 
@@ -46,18 +28,41 @@ export default function Reviews() {
     <section className="reviews-section fade-in-section" ref={sectionRef}>
       <div className="section-container">
         <div className="section-header">
-          <div className="section-label">Customer Reviews</div>
+          <div className="section-label">Reviews</div>
           <h2>Trusted by Snowy Mountains Residents</h2>
+          <p className="section-subtitle">
+            We've completed electrical work across Jindabyne, Thredbo, Perisher and the wider Snowy Mountains region.
+            Happy with our work? We'd love to hear from you.
+          </p>
         </div>
 
-        <div className="reviews-grid">
-          {reviews.map((review, index) => (
-            <div key={index} className="review-card">
-              <div className="review-stars">{'★'.repeat(review.stars)}</div>
-              <p className="review-text">{review.text}</p>
-              <div className="review-author">— {review.author}</div>
+        <div style={{ textAlign: 'center', marginTop: 'var(--space-xl)' }}>
+          <div style={{
+            display: 'inline-flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: 'var(--space-lg)',
+            padding: 'var(--space-2xl)',
+            background: 'var(--pure-white)',
+            borderRadius: '16px',
+            border: '1px solid rgba(14, 165, 233, 0.15)',
+            maxWidth: '480px'
+          }}>
+            <div style={{ fontSize: '3rem' }}>⭐</div>
+            <div>
+              <h3 style={{ marginBottom: 'var(--space-sm)' }}>Leave Us a Review</h3>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem', margin: 0 }}>
+                Had work done by us? Your review helps local homeowners find a trusted electrician.
+              </p>
             </div>
-          ))}
+            <a
+              href="tel:0455221921"
+              className="cta-primary"
+              style={{ width: '100%', justifyContent: 'center' }}
+            >
+              📞 Call Us — 0455 221 921
+            </a>
+          </div>
         </div>
       </div>
     </section>
