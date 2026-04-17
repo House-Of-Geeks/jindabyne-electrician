@@ -1,0 +1,18 @@
+# Jindabyne Electrician
+> Jindabyne Electrician is a licensed electrical contractor serving Jindabyne, Thredbo, Perisher, Cooma, and the Snowy Mountains region of NSW. We provide residential and commercial electrical services including installations, repairs, solar, and emergency callouts.
+
+## About
+- [About Us](https://www.jindabyneelectrician.com.au/about): Licensed electrician based in Jindabyne, servicing the Snowy Mountains.
+- [Contact](https://www.jindabyneelectrician.com.au/contact): Phone, email, and service area.
+
+## Services
+- [Residential Electrical](https://www.jindabyneelectrician.com.au/services/residential): Home electrical installations, renovations, switchboard upgrades, and repairs.
+- [Commercial Electrical](https://www.jindabyneelectrician.com.au/services/commercial): Commercial fit-outs, maintenance, and electrical compliance for businesses.
+- [Solar Installation](https://www.jindabyneelectrician.com.au/services/solar): Solar panel installation and battery storage for homes and businesses.
+- [Emergency Electrical](https://www.jindabyneelectrician.com.au/services/emergency): 24/7 emergency electrical repairs across the Snowy Mountains.
+
+## Service Areas
+- [Snowy Mountains](https://www.jindabyneelectrician.com.au/areas): Covering Jindabyne, Thredbo, Perisher, Cooma, and surrounds.
+
+## Blog
+- [Electrical Tips](https://www.jindabyneelectrician.com.au/blog): Electrical safety tips, guides, and local industry updates.
